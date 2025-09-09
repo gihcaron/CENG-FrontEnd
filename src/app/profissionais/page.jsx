@@ -17,6 +17,21 @@ export default function Profissionais() {
                 <div className={styles.additionalInfo}>
                     <p>Em breve você poderá encontrar aqui informações sobre nossos profissionais.</p>
                 </div>
+        
+            <div className={styles.buttonContainer}>
+                <a 
+                    className={styles.button}
+                    href="/home"
+                >
+                    Voltar para Home
+                </a>
+                <a 
+                    className={styles.button}
+                    href="/profissionais"
+                >
+                    Ver Profissionais
+                </a>
+            </div>
             </div>
         </div>
     );
