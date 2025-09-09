@@ -1,36 +1,108 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+# 🏎️ Mulheres no Automobilismo - Frontend
 
-First, run the development server:
+## 📋 Sobre o Projeto
 
+Um site interativo dedicado à visibilização da participação feminina no automobilismo, destacando as trajetórias de pilotos, engenheiras e jornalistas que fizeram história no esporte. Este projeto visa inspirar novas gerações através de perfis detalhados, categorias de automobilismo e entrevistas exclusivas.
+
+## ✨ Funcionalidades
+
+- 👩‍🔧 **Perfis Detalhados**: Pilotos, engenheiras e jornalistas
+- 🏁 **Categorias**: Modalidades do automobilismo com presença feminina
+- 🎤 **Entrevistas**: Conteúdo exclusivo com profissionais da área
+- 📱 **Design Responsivo**: Interface moderna e acessível
+- 🔍 **Sistema de Busca**: Filtros por categoria e profissão
+
+## 🚀 Tecnologias
+
+- **Frontend**: React/Next.js
+- **Estilização**: CSS Modules / Styled Components
+- **API**: Consumo de API RESTful própria
+- **Deploy**: Vercel/Netlify
+
+## 📦 Instalação
+
+### Pré-requisitos
+- Node.js (versão 16+)
+- npm ou yarn
+- API Backend em execução
+
+### 1. Clone o repositório
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/seu-usuario/mulheres-automobilismo-frontend.git
+cd mulheres-automobilismo-frontend
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. Instale as dependências
+```bash
+npm install
+# ou
+yarn install
+```
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+### 3. Configure as variáveis de ambiente
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Crie um arquivo `.env.local` na raiz do projeto:
 
-## Learn More
+```env
+# API Configuration
+NEXT_PUBLIC_API_URL=http://localhost:3001/api
 
-To learn more about Next.js, take a look at the following resources:
+# Database Connection (se necessário para SSR)
+DATABASE_URL=postgresql://username:password@localhost:5432/
+DATABASE_HOST=localhost
+DATABASE_PORT=Sua Porta
+DATABASE_NAME= automobilsimo_db
+DATABASE_USER=seu_usuario
+DATABASE_PASSWORD=sua_senha
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 4. Inicie o servidor de desenvolvimento
+```bash
+npm run dev
+# ou
+yarn dev
+```
 
-## Deploy on Vercel
+Acesse [http://localhost:3000](http://localhost:3000) no seu navegador.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🔗 Conexão com Backend
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Endpoints da API
+Certifique-se de que o backend esteja rodando em `http://localhost:3001` com os seguintes endpoints:
+
+- `GET /api/v1/profissionais` - Lista todas as jornalistas
+- `GET /api/v1/categorias` - Lista categorias do automobilismo
+- `GET /api/v1/entrevistas` - Lista entrevistas disponíveis
+
+### Estrutura de Pastas
+```
+src/
+├── components/     # Componentes reutilizáveis
+├── pages/         # Páginas do Next.js
+├── services/      # Chamadas para API
+├── styles/        # Estilos globais
+├── utils/         # Funções utilitárias
+└── types/         # Tipos TypeScript
+```
+
+## 🌟 Como Contribuir
+
+1. Faça um fork do projeto
+2. Crie uma branch para sua feature (`git checkout -b feature/nova-feature`)
+3. Commit suas mudanças (`git commit -m 'Adiciona nova feature'`)
+4. Push para a branch (`git push origin feature/nova-feature`)
+5. Abra um Pull Request
+
+## 📝 Licença
+
+Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+
+## 👥 Equipe
+
+Desenvolvido com 💜 pela equipe de desenvolvimento.
+
+---
+
+*Inspirando uma nova geração de mulheres no automobilismo* 🏁
