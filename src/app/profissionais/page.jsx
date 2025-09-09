@@ -1,38 +1,65 @@
-
 "use client";
+import axios from "axios";
+import { ToastContainer, toast} from "react-toastify";
+import { useEffect, useState } from "react";
+import {Pagination, Modal, Card, Skeleton } from "antd";
 import styles from "./styles.module.css";
 
 export default function Profissionais() {
+  const [loading, setLoading] = useState(true);
+  const [search, setSearch] = useState("");
+  const [page, setPage] = useState(1);
+    
+ const [data, setData] = useState({
+        profissionais: [], 
+        loading: true,
+        current: 1,
+        pageSize:0 
+    });
+
+
+    useEffect (() => {
+        const fetchProfissionais = async () => {
+            try{
+                const { data : profissionais} = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/profissionais`,
+                );
+                setData({profissionais, loading: false, current: 1, pageSize: 5});
+            }
+            catch(error){
+                console.error("Erro ao buscar profissionais:", error);
+                toast.error("Erro ao buscar profissionais");
+                setData((d) => ({...d, loading: false}));
+            }
+        };
+        fetchProfissionais();
+
+},[]);
+
+const paginatedProfissionais = () => {
+    const start = (data.current - 1) * data.pageSize;
+    return data.profissionais.slice(start, start + data.pageSize);
+};
+
+    
     return (
-        <div className={styles.container}>
-            <div className={styles.content}>
-                <div className={styles.iconWrapper}>
-                    <div className={styles.icon}>🚧</div>
-                </div>
-                <h1 className={styles.title}>Página em Construção</h1>
-                <p className={styles.subtitle}>Estamos trabalhando para trazer novidades em breve!</p>
-                <div className={styles.loaderWrapper}>
-                    <div className={styles.loader}></div>
-                </div>
-                <div className={styles.additionalInfo}>
-                    <p>Em breve você poderá encontrar aqui informações sobre nossos profissionais.</p>
-                </div>
-        
-            <div className={styles.buttonContainer}>
-                <a 
-                    className={styles.button}
-                    href="/home"
-                >
-                    Voltar para Home
-                </a>
-                <a 
-                    className={styles.button}
-                    href="/profissionais"
-                >
-                    Ver Profissionais
-                </a>
+        <main className={styles.main}>
+            <h1 className={styles.title}>Profissionais</h1>
+
+            <div className={styles.cardsContainer}>
+                {paginatedProfissionais().map((profissional) => (
+                    <Card key={profissional.id} className={styles.card}>
+                        <p className={styles.nome}>{profissional.nome}</p>
+                        {
+                            profissional.idade && <p className={styles.idade}>{profissional.idade} anos</p>
+                        }
+                        <p className={styles.biografia}>{profissional.biografia}</p>
+                        <p className={styles.redesSociais}>{profissional.redes_sociais}</p>
+                        <p className={styles.areaAtuacao}>{profissional.area_atuacao}</p>
+                        <p className={styles.pais}>{profissional.pais}</p>
+                        <p className={styles.categoria}>{profissional.categoria_nome}</p>
+                    </Card>
+                ))}
             </div>
-            </div>
-        </div>
+        </main>
     );
 }
