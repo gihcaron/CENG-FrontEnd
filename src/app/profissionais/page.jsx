@@ -17,7 +17,6 @@ export default function Profissionais() {
         pageSize:0 
     });
 
-
     useEffect (() => {
         const fetchProfissionais = async () => {
             try{
@@ -54,12 +53,40 @@ const paginatedProfissionais = () => {
                         }
                         <p className={styles.biografia}>{profissional.biografia}</p>
                         <p className={styles.redesSociais}>{profissional.redes_sociais}</p>
-                        <p className={styles.areaAtuacao}>{profissional.area_atuacao}</p>
+                        {
+                            profissional.area_atuacao && 
+                            <p className={styles.areaAtuacao}>{profissional.area_atuacao}</p>
+                        }
                         <p className={styles.pais}>{profissional.pais}</p>
+                        {
+                            profissional.categoria_nome && 
                         <p className={styles.categoria}>{profissional.categoria_nome}</p>
+                        }
                     </Card>
                 ))}
             </div>
+                    <div className={styles.pagination}>
+                        <Pagination
+                            current={data.current}
+                            pageSize={data.pageSize}
+                            total={data.profissionais.length}
+                            onChange={(page) => setData((d) => ({...d, current: page}))}
+                            showSizeChanger={false}
+                        />
+                    </div>
+
+            <ToastContainer
+                position="top-right"
+                autoClose={5000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                theme="light"
+            />
         </main>
     );
 }

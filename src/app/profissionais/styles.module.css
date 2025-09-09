@@ -84,6 +84,12 @@
     font-weight: 500;
 }
 
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
 /* Estilos para profissionais usando as cores #07074d e #f1a9ad */
 
 .container {
