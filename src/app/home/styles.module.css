@@ -1,0 +1,68 @@
+.main {
+  min-height: 100vh;
+  width: 100%;
+  background: linear-gradient(135deg, #181818 0%, #222222 100%);
+}
+
+.BannerSection {
+  position: relative;
+  height: 50vh;
+  min-height: 300px;
+  max-height: 600px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.BannerContent {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 2;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+.BannerText {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    text-align: justify;
+  max-width: 600px;
+  min-width: 300px;
+}
+
+.BannerTitle {
+  font-size: 4rem;
+  margin-bottom: 0.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.BannerIcon {
+margin-left: 1rem;
+  width: 6rem;
+  height: 4rem;
+  margin-right: 1rem;
+}
+
+.BannerSubtitle {
+  font-size: 4rem;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  letter-spacing: 0.04em;
+  color: #ea5a42;
+}
+
+@media (max-width: 768px) {
+  .BannerSection {
+    height: 35vh;
+    min-height: 180px;
+    max-height: 350px;
+    padding: 16px;
+  }
+}
