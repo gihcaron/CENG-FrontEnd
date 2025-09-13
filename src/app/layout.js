@@ -1,9 +1,17 @@
 import React from "react";
-import { Poppins } from "next/font/google";
+import { Anton, Montserrat } from "next/font/google";
 import "./globals.css";
 
-const font = Poppins({
-  variable: "--font",
+//  Anton (para títulos)
+const anton = Anton({
+  variable: "--font-anton",
+  weight: "400", // Anton só tem 400
+  subsets: ["latin"],
+});
+
+//Montserrat (para texto)
+const montserrat = Montserrat({
+  variable: "--font-montserrat",
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
   subsets: ["latin"],
 });
@@ -18,9 +26,11 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-    return (
-        <html>
-            <body className={font.variable}>{children}</body>
-        </html>
-    );
+  return (
+    <html>
+      <body className={`${anton.variable} ${montserrat.variable}`}>
+        {children}
+      </body>
+    </html>
+  );
 }
