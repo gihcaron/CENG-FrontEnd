@@ -1,0 +1,60 @@
+.card {
+    background: #fff;
+    border: 2px solid #f1a9ad;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 26rem;
+    width: 22rem;
+       display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.nome {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+
+.areaAtuacao {
+    font-size: 1rem;
+    color: #27ae60;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+
+.categoria {
+    font-size: 0.9rem;
+    background-color: #e74c3c;
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    display: inline-block;
+    font-weight: 500;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+@media (max-width: 600px) {
+    .card {
+        width: 100%;
+        height: auto;
+        padding: 1rem;
+    }
+}
+

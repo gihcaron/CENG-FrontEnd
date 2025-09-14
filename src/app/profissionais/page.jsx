@@ -1,9 +1,14 @@
 "use client";
 import axios from "axios";
+import Image from "next/image";
 import { ToastContainer, toast} from "react-toastify";
 import { useEffect, useState } from "react";
 import {Pagination, Modal, Card, Skeleton } from "antd";
 import styles from "./styles.module.css";
+
+// Imports
+
+import ProfissionalCard from "../../Components/ProfissionalCard";
 
 export default function Profissionais() {
   const [loading, setLoading] = useState(true);
@@ -14,7 +19,7 @@ export default function Profissionais() {
         profissionais: [], 
         loading: true,
         current: 1,
-        pageSize:0 
+        pageSize:4
     });
 
     useEffect (() => {
@@ -22,7 +27,7 @@ export default function Profissionais() {
             try{
                 const { data : profissionais} = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/profissionais`,
                 );
-                setData({profissionais, loading: false, current: 1, pageSize: 5});
+                setData({profissionais, loading: false, current: 1, pageSize: 4});
             }
             catch(error){
                 console.error("Erro ao buscar profissionais:", error);
@@ -46,25 +51,17 @@ const paginatedProfissionais = () => {
 
             <div className={styles.cardsContainer}>
                 {paginatedProfissionais().map((profissional) => (
-                    <Card key={profissional.id} className={styles.card}>
-                        <p className={styles.nome}>{profissional.nome}</p>
-                        {
-                            profissional.idade && <p className={styles.idade}>{profissional.idade} anos</p>
-                        }
-                        <p className={styles.biografia}>{profissional.biografia}</p>
-                        <p className={styles.redesSociais}>{profissional.redes_sociais}</p>
-                        {
-                            profissional.area_atuacao && 
-                            <p className={styles.areaAtuacao}>{profissional.area_atuacao}</p>
-                        }
-                        <p className={styles.pais}>{profissional.pais}</p>
-                        {
-                            profissional.categoria_nome && 
-                        <p className={styles.categoria}>{profissional.categoria_nome}</p>
-                        }
-                    </Card>
+<ProfissionalCard
+  key={profissional.id}
+  foto={profissional.foto}
+  alt={profissional.nome}
+  profissional={profissional.nome}
+  area_atuacao={profissional.area_atuacao}
+  categoria_nome={profissional.categoria_nome}
+/>
                 ))}
             </div>
+                   
                     <div className={styles.pagination}>
                         <Pagination
                             current={data.current}
