@@ -8,6 +8,7 @@ import styles from "./styles.module.css";
 
 // Imports
 import Header from "../../Components/Header";
+import Footer from "../../Components/Footer";
 import ProfissionalCard from "../../Components/ProfissionalCard";
 
 export default function Profissionais() {
@@ -169,6 +170,8 @@ export default function Profissionais() {
           theme="light"
         />
       </section>
+
+      <Footer />
     </main>
   );
 }
