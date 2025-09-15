@@ -14,6 +14,8 @@ export default function Profissionais() {
   const [loading, setLoading] = useState(true);
   const [search, setSearch] = useState("");
   const [page, setPage] = useState(1);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [isCarouselMode, setIsCarouselMode] = useState(false);
 
   const [data, setData] = useState({
     profissionais: [],
@@ -70,10 +72,25 @@ export default function Profissionais() {
         </div>
         <div className={styles.ImageBanner}>
           <Image
-            src="/images/"
+            src="/images/danica-podio.jpg"
             alt="Mulheres no Automobilismo"
             width={500}
             height={300}
+            className={styles.Image}
+          />
+          <Image
+            src="/images/iron-dames.jpeg"
+            alt="Mulheres no Automobilismo"
+            width={500}
+            height={300}
+            className={styles.Image}
+          />
+          <Image
+            src="/images/wseries.jpg"
+            alt="Mulheres no Automobilismo"
+            width={500}
+            height={300}
+            className={styles.Image}
           />
 
 
