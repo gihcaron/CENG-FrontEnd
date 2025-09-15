@@ -40,6 +40,22 @@ export default function Profissionais() {
     fetchProfissionais();
   }, []);
 
+  const handleSearch = async () => {
+    const nome = search.trim();
+    if (nome) {
+      try {
+        const { data: profissionais } = await axios.get(
+          `${process.env.NEXT_PUBLIC_API_URL}/profissionais?nome=${nome}`
+        );
+        setData({ profissionais, loading: false, current: 1, pageSize: 4 });
+      } catch (error) {
+        console.error("Erro ao buscar profissionais:", error);
+        toast.error("Erro ao buscar profissionais");
+        setData((d) => ({ ...d, loading: false }));
+      }
+    }
+  };
+
   const paginatedProfissionais = () => {
     const start = (data.current - 1) * data.pageSize;
     return data.profissionais.slice(start, start + data.pageSize);
@@ -98,7 +114,24 @@ export default function Profissionais() {
       </section>
 
       <section className={styles.profissionaisSection}>
-        <h1 className={styles.title}>Profissionais</h1>
+        <p className={styles.title}>Mulheres que inspiram</p>
+        <p className={styles.description}>
+          Conheça as profissionais que estão fazendo a diferença no
+          automobilismo!
+        </p>
+
+         <div className={styles.searchContainer}>
+            <input
+              type="text"
+              placeholder="Pesquisar..."
+              className={styles.searchInput}
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+            />
+            <button className={styles.searchButton} onClick={handleSearch}>
+              Buscar
+            </button>
+          </div>
 
         <div className={styles.cardsContainer}>
           {paginatedProfissionais().map((profissional) => (
