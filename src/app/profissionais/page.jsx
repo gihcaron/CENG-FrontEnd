@@ -7,7 +7,7 @@ import {Pagination, Modal, Card, Skeleton } from "antd";
 import styles from "./styles.module.css";
 
 // Imports
-
+import Header from "../../Components/Header";
 import ProfissionalCard from "../../Components/ProfissionalCard";
 
 export default function Profissionais() {
@@ -47,6 +47,10 @@ const paginatedProfissionais = () => {
     
     return (
         <main className={styles.main}>
+
+        <section className={styles.HeaderSection}>
+            <Header />
+        </section>
             <h1 className={styles.title}>Profissionais</h1>
 
             <div className={styles.cardsContainer}>
