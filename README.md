@@ -49,7 +49,6 @@ Crie um arquivo `.env.local` na raiz do projeto:
 NEXT_PUBLIC_API_URL=http://localhost:3001/api
 
 # Database Connection (se necessário para SSR)
-DATABASE_URL=postgresql://username:password@localhost:5432/
 DATABASE_HOST=localhost
 DATABASE_PORT=Sua Porta
 DATABASE_NAME= automobilsimo_db
@@ -76,16 +75,6 @@ Certifique-se de que o backend esteja rodando em `http://localhost:3001` com os 
 - `GET /api/v1/categorias` - Lista categorias do automobilismo
 - `GET /api/v1/entrevistas` - Lista entrevistas disponíveis
 
-### Estrutura de Pastas
-```
-src/
-├── components/     # Componentes reutilizáveis
-├── pages/         # Páginas do Next.js
-├── services/      # Chamadas para API
-├── styles/        # Estilos globais
-├── utils/         # Funções utilitárias
-└── types/         # Tipos TypeScript
-```
 
 ## 🌟 Como Contribuir
 
@@ -101,7 +90,7 @@ Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para ma
 
 ## 👥 Equipe
 
-Desenvolvido com 💜 pela equipe de desenvolvimento.
+Desenvolvido com 💜 por Giovanna Caron.
 
 ---
 
