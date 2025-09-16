@@ -1,9 +1,13 @@
 import React from "react";
 import Image from "next/image";
 import { Card } from "antd";
+import { useRouter } from "next/navigation";
 import styles from "./ProfissionalCard.module.css";
 
 export default function ProfissionalCard({ foto, alt, profissional, area_atuacao, categoria_nome }) {
+  
+  const router = useRouter();
+
   return (
     <div className={styles.cardsContainer}>
       <Card className={styles.card}>

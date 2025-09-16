@@ -5,6 +5,7 @@ import { ToastContainer, toast } from "react-toastify";
 import { useEffect, useState } from "react";
 import { Pagination, Modal, Card, Skeleton } from "antd";
 import styles from "./styles.module.css";
+import { useRouter } from "next/navigation";
 
 // Imports
 import Header from "../../Components/Header";
@@ -13,6 +14,7 @@ import ProfissionalCard from "../../Components/ProfissionalCard";
 import CategoriaCard from "../../Components/CategoriaCard";
 
 export default function Profissionais() {
+  const router = useRouter();
   const [loading, setLoading] = useState(true);
   const [search, setSearch] = useState("");
   const [page, setPage] = useState(1);
@@ -199,6 +201,7 @@ export default function Profissionais() {
 
         <div className={styles.cardsContainer}>
           {paginatedProfissionais().map((profissional) => (
+            <div  onClick={() => router.push(`/profissionais/${profissional.id}`)}>
             <ProfissionalCard
               key={profissional.id}
               foto={profissional.foto}
@@ -207,6 +210,7 @@ export default function Profissionais() {
               area_atuacao={profissional.area_atuacao}
               categoria_nome={profissional.categoria_nome}
             />
+            </div>
           ))}
         </div>
 
