@@ -110,34 +110,6 @@
   object-fit: cover;
   margin: 0;
 }
-
-/* Seção Categorias */
-.categoriasSection {
-
-  padding: 3rem 0;
-  min-height: 50rem;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.categoriasDescription {
-  text-align: center;
-  font-size: 1.2rem;
-  margin-bottom: 1rem;
-  color: #333;
-}
-
-.categoriasList {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
-  margin-bottom: 2rem;
-}
-
 /* Seção Profissionais */
 
 .profissionaisSection {

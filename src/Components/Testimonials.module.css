@@ -1,0 +1,158 @@
+.testimonialsSection {
+  background: #ffffff;
+  padding: 4rem 2rem;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.testimonialCard {
+  background: white;
+  padding: 3rem;
+  border-radius: 20px;
+  text-align: center;
+  position: relative;
+  border: 3px solid transparent;
+  background: linear-gradient(white, white) padding-box,
+              linear-gradient(90deg, #961b81 0%, #e6007e 60%, #ed6d05 100%) border-box;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.quoteIcon {
+  font-size: 4rem;
+  background: linear-gradient(90deg, #961b81 0%, #e6007e 60%, #ed6d05 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 1rem;
+  line-height: 1;
+}
+
+.quote {
+  font-size: 1.3rem;
+  line-height: 1.7;
+  color: #333;
+  font-style: italic;
+  margin: 0 0 2rem 0;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.author {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.authorInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.authorName {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+  font-style: normal;
+}
+
+.authorTitle {
+  font-size: 1rem;
+  color: #666;
+  font-weight: 400;
+}
+
+.impactStats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.statItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.statItem:hover {
+  transform: translateY(-3px);
+}
+
+.statNumber {
+  font-size: 2.5rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, #961b81 0%, #e6007e 60%, #ed6d05 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.statLabel {
+  font-size: 0.9rem;
+  color: #666;
+  text-align: center;
+  font-weight: 500;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .testimonialsSection {
+    padding: 3rem 1rem;
+  }
+
+  .testimonialCard {
+    padding: 2rem;
+  }
+
+  .quote {
+    font-size: 1.1rem;
+  }
+
+  .quoteIcon {
+    font-size: 3rem;
+  }
+
+  .impactStats {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .statItem {
+    padding: 1rem;
+  }
+
+  .statNumber {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .quote {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .authorName {
+    font-size: 1.1rem;
+  }
+
+  .authorTitle {
+    font-size: 0.9rem;
+  }
+}

@@ -11,7 +11,6 @@ import { useRouter } from "next/navigation";
 import Header from "../../Components/Header";
 import Footer from "../../Components/Footer";
 import ProfissionalCard from "../../Components/ProfissionalCard";
-import CategoriaCard from "../../Components/CategoriaCard";
 
 export default function Profissionais() {
   const router = useRouter();
@@ -64,38 +63,6 @@ export default function Profissionais() {
     const start = (data.current - 1) * data.pageSize;
     return data.profissionais.slice(start, start + data.pageSize);
   };
-
-
-  // Importar categorias
-
-    const [dataCategorias, setDataCategorias] = useState({
-    categorias: [],
-    loading: true,
-    current: 1,
-    pageSize: 3,
-  });
-
-  useEffect(() => {
-    const fetchCategorias = async () => {
-      try {
-        const { data : categorias } = await axios.get(
-          `${process.env.NEXT_PUBLIC_API_URL}/categorias`
-        );
-        setDataCategorias({ categorias, loading: false, current: 1, pageSize: 3 });
-      } catch (error) {
-        console.error("Erro ao buscar categorias:", error);
-        toast.error("Erro ao buscar categorias");
-        setDataCategorias((d) => ({ ...d, loading: false }));
-      }
-    };
-    fetchCategorias();
-  }, []);
-
-    const paginatedCategorias = () => {
-    const start = (dataCategorias.current - 1) * dataCategorias.pageSize;
-    return dataCategorias.categorias.slice(start, start + dataCategorias.pageSize);
-  };
-
 
   return (
     <main className={styles.main}>
@@ -209,35 +176,6 @@ export default function Profissionais() {
         />
       </section>
 
-      <section className={styles.categoriasSection}>
-        <p className={styles.title}>Categorias</p>
-        <p className={styles.categoriasDescription}>
-          Explore as diversas categorias do automobilismo onde nossas
-          profissionais atuam!
-        </p>
-        
-        <div className={styles.categoriasList}>
-          {paginatedCategorias().map((categoria) => (
-            <CategoriaCard
-              key={categoria.id}
-              categoriaNome={categoria.nome}
-              anoInicio={categoria.ano_inicio}
-              categoriaDescricao={categoria.descricao}
-            />
-          ))}
-          
-        </div>
-
-        <div className={styles.pagination}>
-          <Pagination
-            current={dataCategorias.current}
-            pageSize={dataCategorias.pageSize}
-            total={dataCategorias.categorias.length}
-            onChange={(page) => setDataCategorias((d) => ({ ...d, current: page }))}
-            showSizeChanger={false}
-          />
-        </div>
-      </section>
       
       <Footer />
     </main>

@@ -4,11 +4,15 @@
   box-sizing: border-box;
 }
 
+:root {
+  --font-anton: 'Anton', sans-serif;
+  --font-montserrat: 'Montserrat', sans-serif;
+}
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-anton), sans-serif;
+  font-family: var(--font-anton), sans-serif !important;
 }
 
 body, p, span, a, li {
-  font-family: var(--font-montserrat), sans-serif;
+  font-family: var(--font-montserrat), sans-serif !important;
 }

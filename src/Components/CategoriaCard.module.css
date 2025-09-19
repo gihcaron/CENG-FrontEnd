@@ -7,7 +7,7 @@
 }
 
 .categoriaCard{
-  background: linear-gradient( #e6007e 60%);
+  background: linear-gradient(135deg, #ffffff, #f0f0f0);
   width: 25rem;
   height: 18rem;
   gap:1rem;
@@ -20,7 +20,7 @@
   border-radius: 12px;
   padding: 1rem 1.5rem;
   font-size: 1rem;
-  color: #fff;
+  color: #333;
   font-weight: 600;
   cursor: pointer;
   transition: transform 0.4s ease-out;
@@ -31,6 +31,10 @@
 }
 
 .categoriaNome{
+  background: linear-gradient(135deg, #ff31a9, #ff6a00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   font-size: 2rem;
   font-weight: 400;
   text-transform: uppercase;

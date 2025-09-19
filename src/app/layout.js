@@ -5,7 +5,7 @@ import "./globals.css";
 //  Anton (para títulos)
 const anton = Anton({
   variable: "--font-anton",
-  weight: "400", // Anton só tem 400
+  weight: "400", 
   subsets: ["latin"],
 });
 
@@ -27,7 +27,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html>
+    <html lang="pt-BR">
       <body className={`${anton.variable} ${montserrat.variable}`}>
         {children}
       </body>

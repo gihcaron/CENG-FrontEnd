@@ -1,68 +1,220 @@
 .main {
   min-height: 100vh;
   width: 100%;
-  background: linear-gradient(135deg, #181818 0%, #222222 100%);
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
 }
 
-.BannerSection {
-  position: relative;
-  height: 50vh;
-  min-height: 300px;
-  max-height: 600px;
+.hero {
+  background: #fefefe;
+  padding: 4rem 2rem;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.heroContent {
+  max-width: 1200px;
   width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.textContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.2;
+  text-transform: uppercase;
+  color: #333;
+  margin: 0;
+}
+
+.highlight {
+  background: linear-gradient(90deg, #961b81 0%, #e6007e 60%, #ed6d05 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.subtitle {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+  margin: 0;
+}
+
+.ctaButton {
+  background: linear-gradient(90deg, #961b81 0%, #e6007e 60%, #ed6d05 100%);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  align-self: flex-start;
+  box-shadow: 0 4px 15px rgba(150, 27, 129, 0.3);
+}
+
+.ctaButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(150, 27, 129, 0.4);
+}
+
+.imageContent {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.heroImage {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+
+.Partnership {
+  background: linear-gradient(90deg, #961b81 0%, #e6007e 60%, #ed6d05 100%);
+  width: 100%;
+  height: 9rem;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
   overflow: hidden;
 }
-.BannerContent {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    z-index: 2;
-    color: white;
-    padding: 20px;
-    border-radius: 10px;
-    margin: 20px;
+
+.logosContainer{
+  display: flex;
+  gap: 2rem;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  min-width: max-content;
 }
 
-.BannerText {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    text-align: justify;
-  max-width: 600px;
-  min-width: 300px;
+.logoImage{
+  height: 5rem;
+  width: 90%;
+  flex-shrink: 0;
 }
-
-.BannerTitle {
-  font-size: 4rem;
-  margin-bottom: 0.2rem;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-}
-
-.BannerIcon {
-margin-left: 1rem;
-  width: 6rem;
-  height: 4rem;
-  margin-right: 1rem;
-}
-
-.BannerSubtitle {
-  font-size: 4rem;
-  text-transform: uppercase;
-  margin-bottom: 2rem;
-  letter-spacing: 0.04em;
-  color: #ea5a42;
-}
-
+/* Responsivo */
 @media (max-width: 768px) {
-  .BannerSection {
-    height: 35vh;
-    min-height: 180px;
-    max-height: 350px;
-    padding: 16px;
+  .hero {
+    padding: 2rem 1rem;
+    min-height: 70vh;
+  }
+
+  .heroContent {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    text-align: center;
+  }
+
+  .title {
+    font-size: 2.2rem;
+  }
+
+  .subtitle {
+    font-size: 1.1rem;
+  }
+
+  .ctaButton {
+    align-self: center;
+    padding: 0.8rem 1.5rem;
+  }
+
+  .Partnership {
+    height: 7rem;
+    gap: 1rem;
+  }
+  
+  .logosContainer {
+    gap: 1rem;
+  }
+  
+  .logoImage {
+    height: 4rem;
+    min-width: 40px;
+  }
+}
+
+
+/* Seção Categorias */
+.categoriasSection {
+  background: linear-gradient(90deg, #961b81 0%, #e6007e 60%, #ed6d05 100%);
+  padding: 3rem 0;
+  min-height: 35rem;
+  width: 90%;
+  margin: 0 auto;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.categoriasTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.categoriasDescription {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.categoriasList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.8rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .Partnership {
+    height: 5rem;
+    gap: 1rem;
+  }
+  
+  .logosContainer {
+    gap: 1rem;
+  }
+  
+  .logoImage {
+    height: 2rem;
+    min-width: 40px;
   }
 }
