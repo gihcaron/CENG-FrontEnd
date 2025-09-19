@@ -149,35 +149,6 @@ export default function Profissionais() {
         </div>
       </section>
 
-      <section className={styles.categoriasSection}>
-        <p className={styles.title}>Categorias</p>
-        <p className={styles.categoriasDescription}>
-          Explore as diversas categorias do automobilismo onde nossas
-          profissionais atuam!
-        </p>
-        
-        <div className={styles.categoriasList}>
-          {paginatedCategorias().map((categoria) => (
-            <CategoriaCard
-              key={categoria.id}
-              categoriaNome={categoria.nome}
-              anoInicio={categoria.ano_inicio}
-              categoriaDescricao={categoria.descricao}
-            />
-          ))}
-          
-        </div>
-
-        <div className={styles.pagination}>
-          <Pagination
-            current={dataCategorias.current}
-            pageSize={dataCategorias.pageSize}
-            total={dataCategorias.categorias.length}
-            onChange={(page) => setDataCategorias((d) => ({ ...d, current: page }))}
-            showSizeChanger={false}
-          />
-        </div>
-      </section>
 
       <section className={styles.profissionaisSection}>
         <p className={styles.title}>Mulheres que inspiram</p>
@@ -238,6 +209,36 @@ export default function Profissionais() {
         />
       </section>
 
+      <section className={styles.categoriasSection}>
+        <p className={styles.title}>Categorias</p>
+        <p className={styles.categoriasDescription}>
+          Explore as diversas categorias do automobilismo onde nossas
+          profissionais atuam!
+        </p>
+        
+        <div className={styles.categoriasList}>
+          {paginatedCategorias().map((categoria) => (
+            <CategoriaCard
+              key={categoria.id}
+              categoriaNome={categoria.nome}
+              anoInicio={categoria.ano_inicio}
+              categoriaDescricao={categoria.descricao}
+            />
+          ))}
+          
+        </div>
+
+        <div className={styles.pagination}>
+          <Pagination
+            current={dataCategorias.current}
+            pageSize={dataCategorias.pageSize}
+            total={dataCategorias.categorias.length}
+            onChange={(page) => setDataCategorias((d) => ({ ...d, current: page }))}
+            showSizeChanger={false}
+          />
+        </div>
+      </section>
+      
       <Footer />
     </main>
   );

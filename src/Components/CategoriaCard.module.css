@@ -7,7 +7,7 @@
 }
 
 .categoriaCard{
-  background-color: #d55381;
+  background: linear-gradient( #e6007e 60%);
   width: 25rem;
   height: 18rem;
   gap:1rem;
