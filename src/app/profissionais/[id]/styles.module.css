@@ -1,9 +1,9 @@
 .main {
-    min-height: 100vh;
+    min-height: 120vh;
     height: auto;  
     background: #f8f9fa;
-    padding: 2rem 0;
 }
+
 
 .loading {
     display: flex;
@@ -15,8 +15,10 @@
 }
 
 .containerWrapper {
+    align-content: center;
+    justify-content: center;
     max-width: 1200px;
-    height: auto;
+    height: 50rem;
     margin: 0 auto;
     padding: 0 2rem;
     display: grid;
@@ -28,8 +30,7 @@
 /* Card 1 */
 .profileCard {
     background: white;
-    height: auto;
-    min-height: 35rem;
+    height: 40rem;
     width: 100%;
     border-radius: 25px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
@@ -229,13 +230,11 @@
 .contentCard {
     background: white;
     width: 100%;
-    height: auto;
-    min-height: 35rem;
+    height: 40rem;
     border-radius: 25px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     padding: 2rem;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    overflow-y: auto;
 }
 
 .contentCard:hover {
@@ -344,117 +343,22 @@
 }
 
 /* Responsividade */
-
-/* Desktop Menor (1024px - 1199px) */
-@media (max-width: 1199px) {
-    .containerWrapper {
-        max-width: 1000px;
-        gap: 1.5rem;
-        padding: 0 1.5rem;
-    }
-    
-    .professionalName {
-        font-size: 2rem;
-    }
-    
-    .profilePhotoBorder {
-        width: 11rem;
-        height: 11rem;
-    }
-    
-    .bannerSection {
-        height: 220px;
-        padding-bottom: 70px;
-    }
-    
-    .bannerGradient {
-        height: 11rem;
-    }
-    
-    .contentCard,
-    .profileCard {
-        min-height: 32rem;
-    }
-}
-
-/* Tablets Grandes (768px - 1023px) */
-@media (max-width: 1023px) {
-    .containerWrapper {
-        max-width: 900px;
-        gap: 1.5rem;
-        padding: 0 1rem;
-    }
-    
-    .professionalName {
-        font-size: 1.8rem;
-    }
-    
-    .profilePhotoBorder {
-        width: 10rem;
-        height: 10rem;
-    }
-    
-    .bannerSection {
-        height: 200px;
-        padding-bottom: 60px;
-    }
-    
-    .bannerGradient {
-        height: 10rem;
-    }
-    
-    .sectionTitle {
-        font-size: 1.6rem;
-    }
-    
-    .contentCard {
-        padding: 1.5rem;
-    }
-    
-    .mainInfoSection {
-        padding: 1.5rem;
-    }
-}
-
-/* Tablets Menores (769px - 968px) */
 @media (max-width: 968px) {
-    .main {
-        padding: 1.5rem 0;
-    }
-    
     .containerWrapper {
         grid-template-columns: 1fr;
         gap: 2rem;
         padding: 0 1rem;
-        max-width: 600px;
     }
     
     .profileCard {
         order: 1;
-        min-height: auto;
     }
     
     .contentCard {
         order: 2;
-        min-height: auto;
-    }
-    
-    .professionalName {
-        font-size: 2rem;
-    }
-    
-    .profilePhotoBorder {
-        width: 12rem;
-        height: 12rem;
-    }
-    
-    .bannerSection {
-        height: 230px;
-        padding-bottom: 75px;
     }
 }
 
-/* Mobile Grande (481px - 768px) */
 @media (max-width: 768px) {
     .main {
         padding: 1rem 0;
@@ -463,34 +367,29 @@
     .containerWrapper {
         padding: 0 0.5rem;
         gap: 1.5rem;
-        max-width: 100%;
     }
     
     .bannerSection {
-        height: 180px;
-        padding-bottom: 50px;
-    }
-    
-    .bannerGradient {
-        height: 8rem;
+        height: 200px;
+        padding-bottom: 60px;
     }
     
     .profilePhotoBorder {
-        width: 9rem;
-        height: 9rem;
+        width: 120px;
+        height: 120px;
     }
     
     .profilePhotoContainer {
-        bottom: -45px;
+        bottom: -60px;
     }
     
     .mainInfoSection {
-        margin-top: 60px;
+        margin-top: 80px;
         padding: 1.5rem;
     }
     
     .professionalName {
-        font-size: 1.7rem;
+        font-size: 1.8rem;
     }
     
     .nameSection {
@@ -500,13 +399,6 @@
     
     .badgesContainer {
         gap: 0.8rem;
-        margin-bottom: 1.5rem;
-    }
-    
-    .areaBadge,
-    .categoryTag {
-        padding: 0.8rem 1.2rem;
-        font-size: 0.85rem;
     }
     
     .contentCard {
@@ -515,160 +407,53 @@
     }
     
     .tabsContainer {
-        gap: 0.5rem;
-        margin-bottom: 1.5rem;
+        flex-direction: column;
+        gap: 0;
     }
     
     .tab {
-        padding: 0.8rem 1.5rem;
+        padding: 0.8rem 1rem;
         font-size: 1rem;
-    }
-    
-    .sectionTitle {
-        font-size: 1.5rem;
-        margin-bottom: 1rem;
-    }
-    
-    .biographyText {
-        font-size: 1rem;
-        line-height: 1.6;
     }
     
     .careerInfo {
         gap: 1rem;
     }
-    
-    .careerItem {
-        padding: 1.2rem;
-    }
-    
-    .careerItemTitle {
-        font-size: 1.1rem;
-    }
-    
-    .careerItemText {
-        font-size: 0.95rem;
-    }
 }
 
-/* Mobile Pequeno (até 480px) */
 @media (max-width: 480px) {
-    .main {
-        padding: 0.5rem 0;
-    }
-    
-    .containerWrapper {
-        padding: 0 0.5rem;
-        gap: 1rem;
-    }
-    
     .bannerSection {
         height: 150px;
         padding-bottom: 40px;
     }
     
-    .bannerGradient {
-        height: 7rem;
-    }
-    
     .profilePhotoBorder {
-        width: 8rem;
-        height: 8rem;
+        width: 100px;
+        height: 100px;
     }
     
     .profilePhotoContainer {
-        bottom: -40px;
+        bottom: -50px;
     }
     
     .mainInfoSection {
-        margin-top: 50px;
+        margin-top: 70px;
         padding: 1rem;
     }
     
     .professionalName {
-        font-size: 1.4rem;
+        font-size: 1.5rem;
     }
     
-    .locationAgeSection {
-        flex-direction: column;
-        gap: 0.3rem;
-    }
-    
-    .age,
-    .location {
-        font-size: 0.9rem;
-    }
-    
-    .badgesContainer {
-        gap: 0.6rem;
-        margin-bottom: 1rem;
-    }
-    
-    .areaBadge,
-    .categoryTag {
-        padding: 0.7rem 1rem;
-        font-size: 0.8rem;
+    .sectionTitle {
+        font-size: 1.5rem;
     }
     
     .contentCard {
         padding: 1rem;
-        border-radius: 20px;
-    }
-    
-    .profileCard {
-        border-radius: 20px;
-    }
-    
-    .tabsContainer {
-        flex-direction: column;
-        gap: 0;
-        border-bottom: 1px solid #eee;
-    }
-    
-    .tab {
-        padding: 0.7rem 1rem;
-        font-size: 0.9rem;
-        border-bottom: 1px solid #f0f0f0;
-        text-align: left;
-    }
-    
-    .tab:last-child {
-        border-bottom: none;
-    }
-    
-    .sectionTitle {
-        font-size: 1.3rem;
-        margin-bottom: 0.8rem;
     }
     
     .biographyText {
-        font-size: 0.95rem;
-        line-height: 1.5;
-    }
-    
-    .careerInfo {
-        gap: 0.8rem;
-    }
-    
-    .careerItem {
-        padding: 1rem;
-        border-radius: 12px;
-    }
-    
-    .careerItemTitle {
         font-size: 1rem;
-        margin-bottom: 0.3rem;
-    }
-    
-    .careerItemText {
-        font-size: 0.9rem;
-    }
-    
-    .socialIcon {
-        font-size: 1.2rem;
-    }
-    
-    .socialText {
-        font-size: 0.8rem;
     }
 }
