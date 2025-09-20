@@ -52,3 +52,51 @@
   text-align: justify;
   font-weight: 500;
 }
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .categoriasList {
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .categoriaCard {
+    width: 90%;
+    max-width: 20rem;
+    height: auto;
+    min-height: 15rem;
+    padding: 1rem;
+  }
+
+  .categoriaNome {
+    font-size: 1.5rem;
+  }
+
+  .categoriaAno {
+    font-size: 1.1rem;
+  }
+
+  .categoriaDescricao {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .categoriaCard {
+    width: 95%;
+    max-width: 18rem;
+    padding: 0.8rem;
+  }
+
+  .categoriaNome {
+    font-size: 1.3rem;
+  }
+
+  .categoriaAno {
+    font-size: 1rem;
+  }
+
+  .categoriaDescricao {
+    font-size: 0.85rem;
+  }
+}

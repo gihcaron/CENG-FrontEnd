@@ -112,6 +112,8 @@
   width: 90%;
   flex-shrink: 0;
 }
+
+
 /* Responsivo */
 @media (max-width: 768px) {
   .hero {
@@ -157,7 +159,7 @@
 /* Seção Categorias */
 .categoriasSection {
   background: linear-gradient(90deg, #961b81 0%, #e6007e 60%, #ed6d05 100%);
-  padding: 3rem 0;
+  padding: 3rem 2rem;
   min-height: 35rem;
   width: 90%;
   margin: 0 auto;
@@ -174,6 +176,7 @@
   color: #fff;
   margin-bottom: 1rem;
   text-transform: uppercase;
+  text-align: center;
 }
 
 .categoriasDescription {
@@ -181,6 +184,7 @@
   font-size: 1.2rem;
   margin-bottom: 1rem;
   color: #fff;
+  max-width: 800px;
 }
 
 .categoriasList {
@@ -189,9 +193,30 @@
   justify-content: center;
   gap: 1rem;
   margin-bottom: 2rem;
+  width: 100%;
 }
 
+/* Responsivo para categorias */
+@media (max-width: 768px) {
+  .categoriasSection {
+    width: 95%;
+    padding: 2rem 1.5rem;
+    min-height: 30rem;
+    border-radius: 20px;
+  }
 
+  .categoriasTitle {
+    font-size: 2rem;
+  }
+
+  .categoriasDescription {
+    font-size: 1.1rem;
+  }
+
+  .categoriasList {
+    gap: 0.8rem;
+  }
+}
 
 @media (max-width: 480px) {
   .title {
@@ -200,6 +225,28 @@
 
   .subtitle {
     font-size: 1rem;
+  }
+
+  .categoriasSection {
+    width: 100%;
+    padding: 1.5rem 1rem;
+    min-height: 25rem;
+    border-radius: 15px;
+    margin: 0 0.5rem;
+  }
+
+  .categoriasTitle {
+    font-size: 1.7rem;
+  }
+
+  .categoriasDescription {
+    font-size: 1rem;
+  }
+
+  .categoriasList {
+    gap: 0.6rem;
+    flex-direction: column;
+    align-items: center;
   }
 }
 
@@ -217,4 +264,19 @@
     height: 2rem;
     min-width: 40px;
   }
+
+  .categoriasSection {
+    padding: 1rem 0.5rem;
+    min-height: 20rem;
+    border-radius: 10px;
+  }
+
+  .categoriasTitle {
+    font-size: 1.5rem;
+  }
+
+  .categoriasDescription {
+    font-size: 0.9rem;
+  }
 }
+
