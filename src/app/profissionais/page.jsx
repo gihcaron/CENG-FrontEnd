@@ -80,14 +80,34 @@ export default function Profissionais() {
 
       <section className={styles.ProfissionalSection}>
         <div className={styles.bannerContent}>
-        <h1 className={styles.bannerTitle}>
-          Profissionais que brilham no automobilismo!
-        </h1>
-        <p className={styles.bannerSubtitle}>
-          Explore abaixo uma seleção inspiradora de mulheres que se destacam nas mais diversas áreas do setor automobilístico nacional. 
-          Descubra suas trajetórias, conquistas e o impacto que geram no esporte e na indústria. 
-          Navegue pela lista, inspire-se com suas histórias e veja como elas estão abrindo caminhos e acelerando mudanças no Brasil.
-        </p>
+          <Image
+            src="/images/CENG-Branco.png"
+            alt="Logo"
+            width={200}
+            height={80}
+            className={styles.bannerLogo}
+          />
+
+          <h1 className={styles.bannerTitle}>
+            Profissionais que brilham no automobilismo!
+          </h1>
+          <p className={styles.bannerSubtitle}>
+            Explore abaixo uma seleção inspiradora de mulheres que se destacam
+            nas mais diversas áreas do setor automobilístico nacional. Descubra
+            suas trajetórias, conquistas e o impacto que geram no esporte e na
+            indústria. Navegue pela lista, inspire-se com suas histórias e veja
+            como elas estão abrindo caminhos e acelerando mudanças no Brasil.
+          </p>
+          <button 
+            className={styles.bannerButton}
+            onClick={() => {
+              document.querySelector(`.${styles.profissionaisSection}`)?.scrollIntoView({ 
+                behavior: 'smooth' 
+              });
+            }}
+          >
+            Conheça já
+          </button>
         </div>
         <div className={styles.ImageBanner}>
           <Image
@@ -111,11 +131,8 @@ export default function Profissionais() {
             height={300}
             className={styles.Image}
           />
-
-
         </div>
       </section>
-
 
       <section className={styles.profissionaisSection}>
         <p className={styles.title}>Mulheres que inspiram</p>
@@ -124,30 +141,32 @@ export default function Profissionais() {
           automobilismo!
         </p>
 
-         <div className={styles.searchContainer}>
-            <input
-              type="text"
-              placeholder="Pesquisar..."
-              className={styles.searchInput}
-              value={search}
-              onChange={(e) => setSearch(e.target.value)}
-            />
-            <button className={styles.searchButton} onClick={handleSearch}>
-              Buscar
-            </button>
-          </div>
+        <div className={styles.searchContainer}>
+          <input
+            type="text"
+            placeholder="Pesquisar..."
+            className={styles.searchInput}
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+          />
+          <button className={styles.searchButton} onClick={handleSearch}>
+            Buscar
+          </button>
+        </div>
 
         <div className={styles.cardsContainer}>
           {paginatedProfissionais().map((profissional) => (
-            <div  onClick={() => router.push(`/profissionais/${profissional.id}`)}>
-            <ProfissionalCard
-              key={profissional.id}
-              foto={profissional.foto}
-              alt={profissional.nome}
-              profissional={profissional.nome}
-              area_atuacao={profissional.area_atuacao}
-              categoria_nome={profissional.categoria_nome}
-            />
+            <div
+              onClick={() => router.push(`/profissionais/${profissional.id}`)}
+            >
+              <ProfissionalCard
+                key={profissional.id}
+                foto={profissional.foto}
+                alt={profissional.nome}
+                profissional={profissional.nome}
+                area_atuacao={profissional.area_atuacao}
+                categoria_nome={profissional.categoria_nome}
+              />
             </div>
           ))}
         </div>
@@ -176,7 +195,6 @@ export default function Profissionais() {
         />
       </section>
 
-      
       <Footer />
     </main>
   );
