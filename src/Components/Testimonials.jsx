@@ -15,22 +15,24 @@ export default function Testimonials() {
           <div className={styles.author}>
             <div className={styles.authorInfo}>
               <cite className={styles.authorName}>Bia Figueiredo</cite>
-              <span className={styles.authorTitle}>Piloto de Stock Car</span>
+              <span className={styles.authorTitle}>Piloto da Copa Truck</span>
             </div>
           </div>
         </div>
         
+            <p className={styles.statTitle}> Nossos dados! </p>
         <div className={styles.impactStats}>
           <div className={styles.statItem}>
-            <span className={styles.statNumber}>15+</span>
-            <span className={styles.statLabel}>Países Representados</span>
+
+            <span className={styles.statNumber}>7+</span>
+            <span className={styles.statLabel}>Áreas de atuação Representadas</span>
           </div>
           <div className={styles.statItem}>
-            <span className={styles.statNumber}>200+</span>
+            <span className={styles.statNumber}>30+</span>
             <span className={styles.statLabel}>Profissionais Catalogadas</span>
           </div>
           <div className={styles.statItem}>
-            <span className={styles.statNumber}>50+</span>
+            <span className={styles.statNumber}>10+</span>
             <span className={styles.statLabel}>Categorias Mapeadas</span>
           </div>
         </div>

@@ -139,6 +139,8 @@ export default function Home() {
       </section>
       
       <Testimonials />
+
+      <Footer />
     </main>
     );
 }

@@ -13,7 +13,7 @@ return (
     <footer className={styles.footer}>
         <div className={styles.container}>
             <div className={styles.logoSection} onClick={handleLogoClick} style={{ cursor: 'pointer' }}>
-                <Image src="/images/logoCENG.png" alt="Logo" width={200} height={80} />
+                <Image src="/images/CENG-Branco.png" alt="Logo" width={200} height={80} />
             </div>
             <nav className={styles.links}>
                 <a href="/about">Sobre</a>

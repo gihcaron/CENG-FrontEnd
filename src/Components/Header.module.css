@@ -40,9 +40,19 @@
 
 .item {
   cursor: pointer;
-  font-size: 1rem;
-  font-weight: 400;
-  color: #222222;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #333;
+}
+
+.item:hover {
+  color: #961b81;
+  background: linear-gradient(90deg, #961b81 0%, #e6007e 60%, #ed6d05 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 600;
+  transform: scale(1.05); 
 }
 
 .item a {

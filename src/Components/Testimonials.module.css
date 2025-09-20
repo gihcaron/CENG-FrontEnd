@@ -94,6 +94,20 @@
   transform: translateY(-3px);
 }
 
+.statTitle{
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 0.5rem;
+  font-size: 2.5rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, #961b81 0%, #e6007e 60%, #ed6d05 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
 .statNumber {
   font-size: 2.5rem;
   font-weight: 700;
