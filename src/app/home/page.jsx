@@ -77,7 +77,7 @@ export default function Home() {
         </div>
         <div className={styles.imageContent}>
           <Image
-            src="/images/CarDesign.png"
+            src="/images/HomeImage.png"
             alt="Mulher no automobilismo"
             width={600}
             height={400}
