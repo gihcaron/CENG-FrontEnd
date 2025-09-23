@@ -207,6 +207,11 @@ export default function ProfissionaisDetalhes() {
                 </div>
             </div>
 
+            <section className={styles.ButtonBack}>
+                <button onClick={() => window.history.back()} className={styles.backButton}>
+                    Voltar
+                </button>
+            </section>
             <Footer />
         </main>
     );
