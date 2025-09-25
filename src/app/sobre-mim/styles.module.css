@@ -110,3 +110,39 @@
     bottom: -5px;
     right: -5px;
 }
+
+.divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 4rem 0;
+    width: 100%;
+    height: 100px;
+    overflow: hidden;
+    position: relative;
+    z-index: 0;
+}
+
+.dividerContent {
+    height: 100px;
+    width: 50%;
+    background: linear-gradient(90deg, #961b81 0%, #e6007e 60%, #ed6d05 100%);
+    z-index: 2;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    /* clip-path: polygon(0 0, 100% 0, 100% 70%, 0% 100%); */
+}
+
+.dividerLine {
+    height: 100px;
+    width: 100%;
+    background: #ccc;
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
