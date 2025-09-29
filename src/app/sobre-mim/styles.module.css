@@ -126,9 +126,9 @@
 
 .dividerContent {
     height: 100px;
-    width: 50%;
+    width: 100%;
     background: linear-gradient(90deg, #961b81 0%, #e6007e 60%, #ed6d05 100%);
-    z-index: 2;
+    z-index: 3;
     align-items: center;
     justify-content: center;
     display: flex;
@@ -145,4 +145,226 @@
     left: 0;
     right: 0;
     bottom: 0;
+}
+
+.ability {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.abilityName {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #ffff;
+    margin: 0 0.5rem;
+
+}
+
+.separator {
+    color: #ffff;
+    margin: 0 1rem;
+}
+
+
+/* Serviços - Seção */
+
+.servicesSection {
+    width: 100%;
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+.serviceTitle {
+    background: linear-gradient(90deg, #961b81 0%, #e6007e 60%, #ed6d05 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+
+.cardsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+}
+
+.projectCard {
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+}
+
+.projectCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.12);
+}
+
+.icon {
+    margin-bottom: 1rem;
+}
+
+.projectCard h3 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: #222;
+}
+
+.projectCard p {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+.learnMore {
+    background: linear-gradient(90deg, #961b81 0%, #e6007e 60%, #ed6d05 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.learnMore:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 1024px) {
+    .heroContent {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        max-width: 700px;
+    }
+
+    .HeroContainer {
+        padding: 3rem 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .mainContainer {
+        min-height: unset;
+    }
+
+    .HeroContainer {
+        padding: 2rem 0.5rem;
+        min-height: unset;
+    }
+
+    .heroContent {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        max-width: 100%;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
+    .abilityName {
+        font-size: 1.1rem;
+    }
+
+    .divider {
+        margin: 2rem 0;
+        height: 60px;
+    }
+
+    .dividerContent,
+    .dividerLine {
+        height: 60px;
+    }
+}
+
+@media (max-width: 480px) {
+    .HeroContainer {
+        padding: 1.2rem 0.2rem;
+    }
+
+    .heroContent {
+        gap: 1rem;
+    }
+
+    .title {
+        font-size: 1.3rem;
+    }
+
+    .subtitle {
+        font-size: 0.95rem;
+    }
+
+    .helloText {
+        font-size: 0.9rem;
+        width: 7rem;
+        padding: 0.3rem 0.7rem;
+    }
+
+    .ctaButton {
+        font-size: 0.95rem;
+        padding: 0.7rem 1.2rem;
+    }
+
+    .divider {
+        height: 40px;
+        margin: 1.2rem 0;
+    }
+
+    .dividerContent,
+    .dividerLine {
+        height: 40px;
+    }
+
+    .ability {
+        gap: 0.5rem;
+    }
+
+    .abilityName {
+        font-size: 0.95rem;
+    }
+
+    .separator {
+        margin: 0 0.5rem;
+    }
+}
+
+@media (max-width: 1024px) {
+
+    .heroContent,
+    .textContent {
+        justify-items: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .ctaButton {
+        align-self: center;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .heroContent,
+    .textContent {
+        justify-items: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .ctaButton {
+        align-self: center;
+    }
 }

@@ -4,6 +4,8 @@ import styles from "./styles.module.css";
 import React from "react";
 import { useEffect, useState } from "react";
 import { Card } from "antd";
+import { FaLaptopCode, FaMobileAlt, FaPalette } from "react-icons/fa";
+
 import { useParams } from "next/navigation";
 import Image from "next/image";
 
@@ -15,12 +17,38 @@ import Footer from "../../Components/Footer";
 export default function SobreMim() {
 
     const abilities = [
-        { name: "HTML", level: 90 },
-        { name: "CSS", level: 85 },
-        { name: "JavaScript", level: 80 },
-        { name: "React", level: 75 },
-        { name: "Node.js", level: 70 },
+        { name: "HTML" },
+        { name: "CSS" },
+        { name: "JavaScript" },
+        { name: "React" },
+        { name: "Node.js" },
+        { name: "Next.js" },
+        { name: "Git" },
+        { name: "GitHub" },
+        { name: "SQL" },
+        { name: "Figma" },
     ];
+
+    const project = [
+        {
+            title: "Bora Viajar",
+            desc: "Uma rede social para viajantes, onde os usuários podem compartilhar suas experiências de viagem, fotos e dicas com outros entusiastas de viagens.",
+            icon: <FaPalette size={30} color="#e6007e" />,
+            project: "https://github.com/gihcaron/Bora-Viajar-Web"
+        },
+        {
+            title: "API Disney",
+            desc: "Um projeto para todos os fãs da Disney, na qual consome a API da Disney exibindo personagens e filmes.",
+            icon: <FaMobileAlt size={30} color="#e6007e" />,
+            project: "https://disney-front-project.vercel.app/"
+        },
+        {
+            title: "Portal de Materias",
+            desc: "Um projeto educacional que visa facilitar o acesso a materiais de estudo e recursos para alunos.",
+            icon: <FaLaptopCode size={30} color="#e6007e" />,
+            project: "https://github.com/luschettini/site-portaleducacional"
+        },
+    ]
 
     return (
         <main className={styles.mainContainer}>
@@ -44,31 +72,55 @@ export default function SobreMim() {
                         </button>
                     </div>
                     <div className={styles.imageContent}>
-                         <Image
+                        <Image
                             src="/images/HomeImage.png"
                             alt="Mulher no automobilismo"
                             width={600}
                             height={400}
                             className={styles.heroImage}
                             priority
-                        /> 
+                        />
 
                     </div>
 
                 </div>
-                
-                
+
+
             </section>
             <div className={styles.divider}>
-                    <div className={styles.dividerContent}>
-                        {abilities.map((ability, index) => (
-                            <div key={index} className={styles.ability}>
-                                <span className={styles.abilityName}>{ability.name}</span>
-                                </div>
-                        ))}
-                    </div>
-                    <div className={styles.dividerLine}></div>
+                <div className={styles.dividerContent}>
+                    {abilities.map((ability, index) => (
+                        <div key={index} className={styles.ability}>
+                            <span className={styles.abilityName}>{ability.name}</span>
+                            {index !== abilities.length - 1 && <span className={styles.separator}>✦</span>}
+
+                        </div>
+                    ))}
                 </div>
+                <div className={styles.dividerLine}></div>
+            </div>
+
+            <section className={styles.servicesSection}>
+                <div className={styles.header}>
+                    <p className={styles.serviceTitle}>
+                       Projetos Recentes
+                    </p>
+                    <button className={styles.ctaButton} onClick={() => window.open("https://github.com/gihcaron", "_blank")}>Veja todos os projetos</button>
+                </div>
+
+                <div className={styles.cardsGrid}>
+                    {project.map((project, index) => (
+                        <Card key={index} className={styles.projectCard}>
+                            <div className={styles.icon}>{project.icon}</div>
+                            <h3>{project.title}</h3>
+                            <p>{project.desc}</p>
+                            <a href={project.project} className={styles.learnMore}>
+                                Veja mais →
+                            </a>
+                        </Card>
+                    ))}
+                </div>
+            </section>
 
 
 
