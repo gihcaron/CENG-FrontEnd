@@ -243,6 +243,78 @@
     text-decoration: underline;
 }
 
+
+/* Ferramentas -  Seção  */
+
+.toolsSection {
+    background: linear-gradient(90deg, #961b81 0%, #e6007e 60%);
+    width: 100%;
+    border-radius: 30px;
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 2rem auto;
+    text-align: center;
+}
+
+.toolHeader {
+    margin-bottom: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.toolSubtitle {
+    font-size: 2rem;
+    color: #fff;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.toolsGrid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.toolCard {
+    background: #fff;
+    padding: 2rem 1.5rem;
+    border-radius: 20px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    width: 140px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.toolCard:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.toolIcon {
+    background: #f9f9f9;
+    border-radius: 50%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.percent {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 0.3rem;
+    color: #222;
+}
+
+.toolName {
+    font-size: 0.95rem;
+    color: #555;
+}
+
 @media (max-width: 1024px) {
     .heroContent {
         grid-template-columns: 1fr;

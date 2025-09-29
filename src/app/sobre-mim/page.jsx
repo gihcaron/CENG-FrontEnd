@@ -4,8 +4,7 @@ import styles from "./styles.module.css";
 import React from "react";
 import { useEffect, useState } from "react";
 import { Card } from "antd";
-import { FaLaptopCode, FaMobileAlt, FaPalette } from "react-icons/fa";
-
+import { FaLaptopCode, FaMobileAlt, FaPalette, FaJs, FaCss3Alt, FaHtml5, FaDatabase, FaFigma } from "react-icons/fa";
 import { useParams } from "next/navigation";
 import Image from "next/image";
 
@@ -17,16 +16,12 @@ import Footer from "../../Components/Footer";
 export default function SobreMim() {
 
     const abilities = [
-        { name: "HTML" },
-        { name: "CSS" },
-        { name: "JavaScript" },
-        { name: "React" },
-        { name: "Node.js" },
-        { name: "Next.js" },
-        { name: "Git" },
-        { name: "GitHub" },
-        { name: "SQL" },
-        { name: "Figma" },
+        { name: "HTML", percent: "50%", icon: <FaHtml5 size={40} color="#e6007e" /> },
+        { name: "CSS", percent: "970%", icon: <FaCss3Alt size={40} color="#e6007e" /> },
+        { name: "JavaScript", percent: "98%", icon: <FaJs size={40} color="#e6007e" /> },
+        { name: "React", percent: "90%", icon: <FaLaptopCode size={40} color="#e6007e" /> },
+        { name: "SQL", percent: "98%", icon: <FaDatabase size={40} color="#e6007e" /> },
+        { name: "Figma", percent: "96%", icon: <FaFigma size={40} color="#e6007e" /> },
     ];
 
     const project = [
@@ -49,6 +44,8 @@ export default function SobreMim() {
             project: "https://github.com/luschettini/site-portaleducacional"
         },
     ]
+
+
 
     return (
         <main className={styles.mainContainer}>
@@ -103,7 +100,7 @@ export default function SobreMim() {
             <section className={styles.servicesSection}>
                 <div className={styles.header}>
                     <p className={styles.serviceTitle}>
-                       Projetos Recentes
+                        Projetos Recentes
                     </p>
                     <button className={styles.ctaButton} onClick={() => window.open("https://github.com/gihcaron", "_blank")}>Veja todos os projetos</button>
                 </div>
@@ -122,6 +119,21 @@ export default function SobreMim() {
                 </div>
             </section>
 
+            <section className={styles.toolsSection}>
+                <div className={styles.toolHeader}>
+                    <span className={styles.toolSubtitle}>Minhas Ferramentas Mais utilizadas</span>
+                </div>
+
+                <div className={styles.toolsGrid}>
+                    {abilities.map((ability, index) => (
+                        <div key={index} className={styles.toolCard}>
+                            <div className={styles.toolIcon}>{ability.icon}</div>
+                            <p className={styles.percent}>{ability.percent}</p>
+                            <span className={styles.toolName}>{ability.name}</span>
+                        </div>
+                    ))}
+                </div>
+            </section>
 
 
             <Footer />
