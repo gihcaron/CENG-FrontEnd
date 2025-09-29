@@ -4,7 +4,7 @@ import styles from "./styles.module.css";
 import React from "react";
 import { useEffect, useState } from "react";
 import { Card } from "antd";
-import { FaLaptopCode, FaMobileAlt, FaPalette, FaJs, FaCss3Alt, FaHtml5, FaDatabase, FaFigma } from "react-icons/fa";
+import { FaLaptopCode, FaMobileAlt, FaPalette, FaJs, FaCss3Alt, FaHtml5, FaDatabase, FaFigma, FaDownload} from "react-icons/fa";
 import { useParams } from "next/navigation";
 import Image from "next/image";
 
@@ -62,10 +62,11 @@ export default function SobreMim() {
                             <span className={styles.highlightTitle}>Giovanna Caron,</span> desenvolvedora de sistemas.
                         </p>
                         <p className={styles.subtitle}>
-                            Sou uma <span className={styles.highlight}>Estudante de Análise e Desenvolvimento de Sistemas </span> do SENAI Valinhos e também uma <span className={styles.highlight}>entusiasta por automobilismo</span>. Apaixonada por tecnologia, sempre busco novas oportunidades para crescer profissionalmente.
+                            Sou uma <span className={styles.highlight}>Estudante de Análise e Desenvolvimento de Sistemas </span> do SENAI Valinhos e também uma <span className={styles.highlight}>entusiasta por automobilismo</span>. Tenho 17 anos e sou paixonada por tecnologia, sempre busco novas oportunidades para crescer profissionalmente.
                         </p>
-                        <button className={styles.ctaButton}>
-                            Veja Meus Projetos!
+                        <button className={styles.ctaButton}
+                            onClick={() => window.open("https://www.linkedin.com/in/giovanna-caron/", "_blank")}>
+                            Conecte-se comigo!
                         </button>
                     </div>
                     <div className={styles.imageContent}>
@@ -135,6 +136,41 @@ export default function SobreMim() {
                 </div>
             </section>
 
+            <section className={styles.aboutProjectSection}>
+                <div className={styles.aboutContainer}>
+                    <div className={styles.imageContainer}>
+                        <div className={styles.photo}>
+                            <Image
+                                src="/images/about-project.png"
+                                alt="Sobre o Projeto"
+                                width={600}
+                                height={400}
+                                className={styles.aboutImage}
+                                priority
+                            />
+                        </div>
+                        <div className={styles.textContent}>
+                            <span className={styles.subtitle}>— Quando a tecnologia encontra o MotorSport</span>
+                            <h2>
+                                Conheça o <span className={styles.highlight}>Com elas no Grid</span>
+                            </h2>
+                            <p>
+                             Além de desenvolvedora, participei de projetos voltado ao automonilismo, como o STEM Racing. Através do "Com Elas no Grid", meu objetivo é destacar e celebrar as conquistas das mulheres no automobilismo, promovendo a diversidade e a inclusão nesse esporte emocionante.
+                            </p>
+
+                            <div className={styles.buttons}>
+                                <button className={styles.cta}>
+                                    <FaDownload /> Download CV
+                                </button>
+                                <span className={styles.signature}>Giovanna Caron</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
 
             <Footer />
         </main>
