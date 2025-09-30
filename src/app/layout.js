@@ -17,12 +17,11 @@ const montserrat = Montserrat({
 });
 
 export const metadata = {
-    title: "Com ELas No Grid",
-    icons: {
+  title: "Com ELas No Grid",
+  icons: {
     icon: "/icons/favicon.ico",
   },
-    description: "Projeto Final Individual - CENG",
-
+  description: "Projeto Final Individual - CENG",
 };
 
 export default function RootLayout({ children }) {
