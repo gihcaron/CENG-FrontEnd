@@ -298,6 +298,50 @@
     font-size: 2.3rem;
   }
 }
+@media (max-width: 1200px) {
+  .cardsContainer {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding: 1.5rem;
+    gap: 1rem;
+    width: 100%;
+    max-width: 100vw;
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: 900px) {
+  .cardsContainer {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    padding: 1rem;
+    gap: 0.8rem;
+    width: 100%;
+    max-width: 100vw;
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: 600px) {
+  .cardsContainer {
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem;
+    gap: 0.5rem;
+  }
+}
+@media (max-width: 1200px) {
+  .cardsContainer {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding: 1.5rem;
+    gap: 1rem;
+    width: 100%;
+    max-width: 100vw;
+    box-sizing: border-box;
+  }
+}
 
 /* Tablet vertical e desktop pequeno (768px - 900px) */
 @media (max-width: 900px) {

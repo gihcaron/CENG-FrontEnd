@@ -453,7 +453,42 @@
         gap: 1rem;
     }
 }
+@media (max-width: 1300px) {
+    .containerWrapper {
+        margin-top: 3rem;
+        max-width: 95vw;
+        padding: 0 1rem;
+        gap: 1.5rem;
+    }
 
+    .profileCard,
+    .contentCard {
+        max-width: 95vw;
+        padding: 1.5rem;
+    }
+
+    .bannerSection {
+        height: 200px;
+        padding-bottom: 60px;
+    }
+
+    .profilePhotoBorder {
+        width: 10rem;
+        height: 10rem;
+    }
+
+    .mainInfoSection {
+        padding: 1.5rem;
+    }
+
+    .professionalName {
+        font-size: 1.8rem;
+    }
+
+    .sectionTitle {
+        font-size: 1.5rem;
+    }
+}
 @media (max-width: 480px) {
     .bannerSection {
         height: 150px;
