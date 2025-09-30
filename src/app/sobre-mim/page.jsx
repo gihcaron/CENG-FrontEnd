@@ -141,7 +141,7 @@ export default function SobreMim() {
                     <div className={styles.imageContainer}>
                         <div className={styles.photo}>
                             <Image
-                                src="/images/about-project.png"
+                                src="/images/danica-podio.jpg"
                                 alt="Sobre o Projeto"
                                 width={600}
                                 height={400}
@@ -150,10 +150,10 @@ export default function SobreMim() {
                             />
                         </div>
                         <div className={styles.textContent}>
-                            <span className={styles.subtitle}>— Quando a tecnologia encontra o MotorSport</span>
-                            <h2>
+                            <span className={styles.subtitleCENG}>— Quando a tecnologia encontra o MotorSport</span>
+                            <p className={styles.titleCENG}>
                                 Conheça o <span className={styles.highlight}>Com elas no Grid</span>
-                            </h2>
+                            </p>
                             <p>
                              Além de desenvolvedora, participei de projetos voltado ao automonilismo, como o STEM Racing. Através do "Com Elas no Grid", meu objetivo é destacar e celebrar as conquistas das mulheres no automobilismo, promovendo a diversidade e a inclusão nesse esporte emocionante.
                             </p>
