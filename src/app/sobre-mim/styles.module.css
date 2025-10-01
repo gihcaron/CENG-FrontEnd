@@ -319,90 +319,113 @@
 /*  Sobre o Projeto CENG - Seção  */
 
 .aboutProjectSection {
-    background: #ebebeb;
-    margin: 3rem auto;
-  height: 30rem;
-  padding: 3rem;  
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  align-content: center;
-  gap: 3rem;
-  flex-wrap: wrap;
-
+    background: linear-gradient(90deg, #961b81 0%, #e6007e 60%, #ed6d05 100%);
+    padding: 5rem 2rem;
+    color: #fff;
+    margin: 3rem 0;
 }
 
-.imageContainer{
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+
+/* Foto Perfil */
+.imageProfile {
     position: relative;
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .photo {
-  border-radius: 50%;
-  overflow: hidden;
-  border: 8px solid #fff;
-  width: 320px;
-  height: 320px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 8px solid #fff;
+    width: 320px;
+    height: 320px;
 }
 
 .photo img {
-  object-fit: cover;
+    object-fit: cover;
 }
 
-.textContent {
-  flex: 1;
-  display: flex;
-  margin-left: 10rem;
+.textAboutProject {
+    flex: 1;
 }
 
-.subtitle {
-  font-size: 0.9rem;
-  color: #333;
+.subtitleAboutProject {
+    font-size: 0.9rem;
+    color: #ffffff;
 }
 
-.textContent h2 {
-  font-size: 2.5rem;
-  margin: 0.5rem 0;
+.titleAboutProject {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 1.5rem 0 1.5rem;
+    line-height: 1.2;
 }
 
-.textContent p {
-  margin: 1rem 0 2rem;
-  line-height: 1.6;
+.descriptionAboutProject {
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.6;
+    color: #fefdfd;
+    margin-bottom: 2rem;
+}
+
+/* Informações pessoais */
+
+.Infos {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.Info h3 {
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+    font-size: 1.8rem;
+    color: #fff;
+}
+
+.Info p {
+    margin: 0;
+    font-size: 0.9rem;
 }
 
 .buttons {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
 }
 
-.cta {
-  background: linear-gradient(90deg, #961b81 0%, #e6007e 60%, #ed6d05 100%);
-  color: #fff;
-  padding: 0.8rem 1.5rem;
-  font-weight: 600;
-  border: none;
-  border-radius: 30px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  transition: 0.3s ease;
+.projectButton{
+    background: #fff;
+    color:#e6007e;
+    border: 2px solid #fff;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
-.cta:hover {
-  background: #fff;
-  color: #961b81;}
-
-.signature {
-  font-family: "Brush Script MT", cursive;
-  font-size: 1.6rem;
+.projectButton:hover {
+    background: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 3px 10px rgba(255, 255, 255, 0.4);
 }
-
 
 @media (max-width: 1024px) {
     .heroContent {
@@ -464,135 +487,93 @@
         align-self: center;
     }
 }
-    
-    @media (max-width: 480px) {
-        .HeroContainer {
-            padding: 1.2rem 0.2rem;
-        }
-    
-        .heroContent {
-            gap: 1rem;
-        }
-    
-        .title {
-            font-size: 1.3rem;
-        }
-    
-        .subtitle {
-            font-size: 0.95rem;
-        }
-    
-        .helloText {
-            font-size: 0.9rem;
-            width: 7rem;
-            padding: 0.3rem 0.7rem;
-        }
-    
-        .ctaButton {
-            font-size: 0.95rem;
-            padding: 0.7rem 1.2rem;
-        }
-    
-        .divider {
-            height: 40px;
-            margin: 1.2rem 0;
-        }
-    
-        .dividerContent,
-        .dividerLine {
-            height: 40px;
-        }
-    
-        .ability {
-            gap: 0.5rem;
-        }
-    
-        .abilityName {
-            font-size: 0.95rem;
-        }
-    
-        .separator {
-            margin: 0 0.5rem;
-        }
-    }
-    
-    @media (max-width: 1024px) {
 
-        .heroContent,
-        .textContent {
-            justify-items: center;
-            align-items: center;
-            text-align: center;
-        }
-        .aboutProjectSection {
-            flex-direction: column;
-            height: auto;
-            padding: 2rem 1rem;
-            gap: 2rem;
-        }
-
-        .imageContainer {
-            width: 100%;
-            margin-bottom: 2rem;
-        }
-
-        .photo {
-            width: 180px;
-            height: 180px;
-        }
-
-        .textContent {
-            margin-left: 0;
-            width: 100%;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-        }
-        .ctaButton {
-            align-self: center;
-        }
+@media (max-width: 480px) {
+    .HeroContainer {
+        padding: 1.2rem 0.2rem;
     }
 
-    @media (max-width: 768px) {
-        .aboutProjectSection {
-            padding: 1.2rem 0.5rem;
-            gap: 1.2rem;
-        }
-        .photo {
-            width: 120px;
-            height: 120px;
-        }
-        .textContent h2 {
-            font-size: 1.5rem;
-        }
-        .textContent p {
-            font-size: 0.95rem;
-        }
-        .buttons {
-            gap: 1rem;
-            flex-direction: column;
-        }
+    .heroContent {
+        gap: 1rem;
     }
 
-    @media (max-width: 480px) {
-        .aboutProjectSection {
-            padding: 0.5rem 0.2rem;
-            gap: 0.7rem;
-        }
-        .photo {
-            width: 80px;
-            height: 80px;
-        }
-        .textContent h2 {
-            font-size: 1.1rem;
-        }
-        .textContent p {
-            font-size: 0.85rem;
-        }
-        .buttons {
-            gap: 0.5rem;
-            flex-direction: column;
-        }
+    .title {
+        font-size: 1.3rem;
     }
 
-    
+    .subtitle {
+        font-size: 0.95rem;
+    }
+
+    .helloText {
+        font-size: 0.9rem;
+        width: 7rem;
+        padding: 0.3rem 0.7rem;
+    }
+
+    .ctaButton {
+        font-size: 0.95rem;
+        padding: 0.7rem 1.2rem;
+    }
+
+    .divider {
+        height: 40px;
+        margin: 1.2rem 0;
+    }
+
+    .dividerContent,
+    .dividerLine {
+        height: 40px;
+    }
+
+    .ability {
+        gap: 0.5rem;
+    }
+
+    .abilityName {
+        font-size: 0.95rem;
+    }
+
+    .separator {
+        margin: 0 0.5rem;
+    }
+}
+
+@media (max-width: 1024px) {
+
+    .heroContent,
+    .textContent {
+        justify-items: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .aboutProjectSection {
+        flex-direction: column;
+        height: auto;
+        padding: 2rem 1rem;
+        gap: 2rem;
+    }
+
+    .imageContainer {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    .photo {
+        width: 180px;
+        height: 180px;
+    }
+
+    .textContent {
+        margin-left: 0;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .ctaButton {
+        align-self: center;
+    }
+}

@@ -4,7 +4,7 @@ import styles from "./styles.module.css";
 import React from "react";
 import { useEffect, useState } from "react";
 import { Card } from "antd";
-import { FaLaptopCode, FaMobileAlt, FaPalette, FaJs, FaCss3Alt, FaHtml5, FaDatabase, FaFigma, FaDownload} from "react-icons/fa";
+import { FaLaptopCode, FaMobileAlt, FaPalette, FaJs, FaCss3Alt, FaHtml5, FaDatabase, FaFigma, FaDownload } from "react-icons/fa";
 import { useParams } from "next/navigation";
 import Image from "next/image";
 
@@ -65,8 +65,8 @@ export default function SobreMim() {
                             Sou uma <span className={styles.highlight}>Estudante de Análise e Desenvolvimento de Sistemas </span> do SENAI Valinhos e também uma <span className={styles.highlight}>entusiasta por automobilismo</span>. Tenho 17 anos e sou paixonada por tecnologia, sempre busco novas oportunidades para crescer profissionalmente.
                         </p>
                         <button className={styles.ctaButton}
-                            onClick={() => window.open("https://www.linkedin.com/in/giovanna-caron/", "_blank")}>
-                            Conecte-se comigo!
+                            onClick={() => window.open("https://github.com/gihcaron", "_blank")}>
+                            Conecte-se comigo no GitHub!
                         </button>
                     </div>
                     <div className={styles.imageContent}>
@@ -137,39 +137,49 @@ export default function SobreMim() {
             </section>
 
             <section className={styles.aboutProjectSection}>
-                <div className={styles.aboutContainer}>
-                    <div className={styles.imageContainer}>
+                <div className={styles.container}>
+                    <div className={styles.imageProfile}>
                         <div className={styles.photo}>
                             <Image
                                 src="/images/danica-podio.jpg"
-                                alt="Sobre o Projeto"
-                                width={600}
-                                height={400}
-                                className={styles.aboutImage}
-                                priority
+                                alt="About Me"
+                                width={300}
+                                height={300}
                             />
                         </div>
-                        <div className={styles.textContent}>
-                            <span className={styles.subtitleCENG}>— Quando a tecnologia encontra o MotorSport</span>
-                            <p className={styles.titleCENG}>
-                                Conheça o <span className={styles.highlight}>Com elas no Grid</span>
-                            </p>
-                            <p>
-                             Além de desenvolvedora, participei de projetos voltado ao automonilismo, como o STEM Racing. Através do "Com Elas no Grid", meu objetivo é destacar e celebrar as conquistas das mulheres no automobilismo, promovendo a diversidade e a inclusão nesse esporte emocionante.
-                            </p>
+                    </div>
 
-                            <div className={styles.buttons}>
-                                <button className={styles.cta}>
-                                    <FaDownload /> Download CV
-                                </button>
-                                <span className={styles.signature}>Giovanna Caron</span>
+                    <div className={styles.textAboutProject}>
+                        <span className={styles.subtitleAboutProject}>— Como nasceu o Com elas no grid? </span>
+                        <p className={styles.titleAboutProject}>
+                            Quando a tecnologia e automobilismo se encontraram.
+                        </p>
+                        <p className={styles.descriptionAboutProject}>
+                            O Com Elas no Grid surgiu da minha paixão pelo automobilismo e do desejo de dar mais visibilidade às mulheres nesse esporte. Ao competir pela STEM Racing, percebi a falta de representatividade feminina e, como desenvolvedora, criei um espaço para celebrar conquistas e inspirar outras mulheres nas pistas.                        </p>
+
+                        <div className={styles.Infos}>
+                            <div className={styles.Info}>
+                                <h3>+3 anos</h3>
+                                <p> STEM Racing</p>
+                            </div>
+                            <div className={styles.Info}>
+                                <h3>1 ano</h3>
+                                <p>PodCast Nitrodelas</p>
+                            </div>
+                            <div className={styles.Info}>
+                                <h3>1 ano</h3>
+                                <p>Mentora STEM Racing</p>
                             </div>
                         </div>
 
+                        <div className={styles.buttons}>
+                            <button className={styles.projectButton}
+                                onClick={() => window.open("https://www.linkedin.com/in/giovanna-caron/", "_blank")}>
+                               <p>Faça parte da minha rede!</p> 
+                            </button>
+                        </div>
                     </div>
-
                 </div>
-
             </section>
 
             <Footer />
