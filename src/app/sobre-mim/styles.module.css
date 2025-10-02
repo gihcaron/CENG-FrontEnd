@@ -563,177 +563,107 @@
     transform: translateY(-2px);
 }
 
+/* Responsividade */
 
-@media (max-width: 1024px) {
+
+@media (max-width: 1200px) {
     .heroContent {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-        max-width: 700px;
+        gap: 2.5rem;
+        grid-template-columns: 1fr 1fr;
     }
 
-    .HeroContainer {
-        padding: 3rem 1rem;
+    .title {
+        font-size: 2.2rem;
     }
 }
 
-@media (max-width: 768px) {
-    .mainContainer {
-        min-height: unset;
-    }
-
-    .HeroContainer {
-        padding: 2rem 0.5rem;
-        min-height: unset;
-    }
-
+/* --- Tablets (até 992px) --- */
+@media (max-width: 992px) {
     .heroContent {
         grid-template-columns: 1fr;
-        gap: 1.5rem;
-        max-width: 100%;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .textContent {
+        align-items: center;
     }
 
     .title {
         font-size: 2rem;
     }
 
-    .abilityName {
-        font-size: 1.1rem;
+    .ContactSection {
+        padding: 3rem 1.5rem;
     }
 
-    .divider {
-        margin: 2rem 0;
-        height: 60px;
-    }
-
-    .dividerContent,
-    .dividerLine {
-        height: 60px;
+    .contactForm {
+        padding: 2rem;
     }
 }
 
 @media (max-width: 768px) {
+    .HeroContainer {
+        padding: 2.5rem 1rem;
+        min-height: auto;
+    }
 
-    .heroContent,
-    .textContent {
-        justify-items: center;
-        align-items: center;
-        text-align: center;
+    .title {
+        font-size: 1.8rem;
     }
 
     .ctaButton {
-        align-self: center;
+        font-size: 1rem;
+        padding: 0.8rem 1.5rem;
+    }
+
+    .contactTitle {
+        font-size: 2rem;
+    }
+
+    .contactForm {
+        padding: 1.5rem;
+        gap: 1rem;
     }
 }
 
 @media (max-width: 480px) {
     .HeroContainer {
-        padding: 1.2rem 0.2rem;
-    }
-
-    .heroContent {
-        gap: 1rem;
+        padding: 1.5rem 0.8rem;
     }
 
     .title {
-        font-size: 1.3rem;
+        font-size: 1.4rem;
     }
 
     .subtitle {
         font-size: 0.95rem;
     }
 
-    .helloText {
-        font-size: 0.9rem;
-        width: 7rem;
-        padding: 0.3rem 0.7rem;
-    }
-
     .ctaButton {
+        font-size: 0.9rem;
+        padding: 0.6rem 1.2rem;
+    }
+
+    .contactTitle {
+        font-size: 1.6rem;
+    }
+
+    .contactSubtitle {
         font-size: 0.95rem;
-        padding: 0.7rem 1.2rem;
-    }
-
-    .divider {
-        height: 40px;
-        margin: 1.2rem 0;
-    }
-
-    .dividerContent,
-    .dividerLine {
-        height: 40px;
-    }
-
-    .ability {
-        gap: 0.5rem;
-    }
-
-    .abilityName {
-        font-size: 0.95rem;
-    }
-
-    .separator {
-        margin: 0 0.5rem;
-    }
-
-    .logo{
-        width: 150px;
-        height: auto;
     }
 
     .contactForm {
         padding: 1rem;
     }
 
-    .label {
-        font-size: 0.95rem;
-    }
-
     .input, .textarea {
-        font-size: 0.95rem;
+        font-size: 0.9rem;
         padding: 0.7rem;
     }
 
     .submitButton {
-        font-size: 0.95rem;
-        padding: 0.7rem 1.2rem;
-    }
-}
-
-@media (max-width: 1024px) {
-
-    .heroContent,
-    .textContent {
-        justify-items: center;
-        align-items: center;
-        text-align: center;
-    }
-
-    .aboutProjectSection {
-        flex-direction: column;
-        height: auto;
-        padding: 2rem 1rem;
-        gap: 2rem;
-    }
-
-    .imageContainer {
-        width: 100%;
-        margin-bottom: 2rem;
-    }
-
-    .photo {
-        width: 180px;
-        height: 180px;
-    }
-
-    .textContent {
-        margin-left: 0;
-        width: 100%;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .ctaButton {
-        align-self: center;
+        font-size: 1rem;
+        padding: 0.7rem 1.3rem;
     }
 }
