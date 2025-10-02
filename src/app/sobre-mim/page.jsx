@@ -1,9 +1,10 @@
 "use client";
 
 import styles from "./styles.module.css";
-import React from "react";
+import { useRef } from "react";
 import { useEffect, useState } from "react";
 import { Card } from "antd";
+import emailjs from "emailjs-com";
 import { FaLaptopCode, FaMobileAlt, FaPalette, FaJs, FaCss3Alt, FaHtml5, FaDatabase, FaFigma, FaDownload } from "react-icons/fa";
 import { useParams } from "next/navigation";
 import Image from "next/image";
@@ -14,6 +15,34 @@ import Footer from "../../Components/Footer";
 
 
 export default function SobreMim() {
+
+    // Estados locais para funcionamento do contato
+    const [enviado, setEnviado] = useState(false);
+    const form = useRef();
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+
+        emailjs
+            .sendForm(
+                'service_t6excnj',
+                'template_sif55yq',
+                form.current,
+                'tzz9oH30Q5DzDpD8l'
+            )
+            .then(
+                (result) => {
+                    alert("Email enviado com sucesso!");
+                    setEnviado(true);
+                },
+                (error) => {
+                    alert("Erro ao enviar email: " + error.text);
+                }
+            );
+    };
+
+
+    // Dados utilizados na página
 
     const abilities = [
         { name: "HTML", percent: "50%", icon: <FaHtml5 size={40} color="#e6007e" /> },
@@ -175,11 +204,53 @@ export default function SobreMim() {
                         <div className={styles.buttons}>
                             <button className={styles.projectButton}
                                 onClick={() => window.open("https://www.linkedin.com/in/giovanna-caron/", "_blank")}>
-                               <p>Faça parte da minha rede!</p> 
+                                <p>Faça parte da minha rede!</p>
                             </button>
                         </div>
                     </div>
                 </div>
+            </section>
+
+            <section className={styles.ContactSection}>
+                 <div className={styles.contactIntro}>
+        <p className={styles.contactTitle}>
+          Entre em <span className={styles.highlight}>Contato</span>
+        </p>
+        <p className={styles.contactSubtitle}>
+          Ficarei feliz em responder sua mensagem e conversar sobre novas
+          oportunidades, ideias e projetos.
+        </p>
+      </div>
+                <div>
+                    {enviado ?
+                    
+                        (
+                            <div className={styles.thankYouMessage}>
+                                <Image className={styles.logo}
+                                    src="/images/logoCENG.png"
+                                    alt="Logo COM ELAS NO GRID"
+                                    width={250}
+                                    height={100}
+                                />
+                                <h2>Obrigado por entrar em contato!</h2>
+                                <p>Em breve, responderei sua mensagem.</p>
+                                <button className={styles.ctaButton} onClick={() => setEnviado(false)}>Enviar outra mensagem</button>
+                            </div>
+                        ) : (
+
+                            <form ref={form} onSubmit={sendEmail} className={styles.contactForm}>
+                                <label className={styles.label}>Nome</label>
+                                <input type="text" name="name" placeholder="Nome" className={styles.input} required />
+                                <label className={styles.label}>Email</label>
+                                <input type="email" name="email" placeholder="Email" className={styles.input} required />
+                                <label className={styles.label}>Mensagem</label>
+                                <textarea name="message" placeholder="Mensagem" className={styles.textarea} required />
+                                <button type="submit" value="Send" className={styles.submitButton}>Enviar</button>
+                            </form>
+
+                        )}
+                </div>
+
             </section>
 
             <Footer />

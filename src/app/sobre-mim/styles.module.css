@@ -427,6 +427,143 @@
     box-shadow: 0 3px 10px rgba(255, 255, 255, 0.4);
 }
 
+/* Formulário de Contato - Seção */
+
+.ContactSection {
+    background: #fefefe;
+    padding: 4rem 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contactIntro {
+  margin-bottom: 3rem;
+}
+
+.contactTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.highlight {
+  background: linear-gradient(90deg, #961b81 0%, #e6007e 60%, #ed6d05 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.contactSubtitle {
+  font-size: 1.1rem;
+  color: #555;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Formulário de Contato - Seção */
+
+.contactForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 2.5rem;
+    border-radius: 20px;
+    background: #fff;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contactForm:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+.label {
+    text-align: left;
+    font-weight: 600;
+    font-size: 1rem;
+    color: #333;
+}
+
+.input, .textarea {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 12px;
+    border: 2px solid #ddd;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    outline: none;
+}
+
+.input:focus, .textarea:focus {
+    border-color: #e6007e;
+    box-shadow: 0 0 8px rgba(230, 0, 126, 0.3);
+}
+
+.textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.submitButton {
+    background: linear-gradient(90deg, #961b81 0%, #e6007e 60%, #ed6d05 100%);
+    color: #fff;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(150, 27, 129, 0.3);
+}
+
+.submitButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(150, 27, 129, 0.4);
+}
+
+/* Mensagem de obrigado */
+.thankYouMessage {
+    padding: 2rem;
+    border-radius: 20px;
+   background: #fefefe;
+       color: #333;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.thankYouMessage h2 {
+    margin-bottom: 0.8rem;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.thankYouMessage p {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+.thankYouMessage button {
+    color: #ffff;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 50px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.thankYouMessage button:hover {
+    background: transparent;
+    border: 2px solid #e6007e;
+    color: #e6007e;
+    transform: translateY(-2px);
+}
+
+
 @media (max-width: 1024px) {
     .heroContent {
         grid-template-columns: 1fr;
@@ -536,6 +673,29 @@
 
     .separator {
         margin: 0 0.5rem;
+    }
+
+    .logo{
+        width: 150px;
+        height: auto;
+    }
+
+    .contactForm {
+        padding: 1rem;
+    }
+
+    .label {
+        font-size: 0.95rem;
+    }
+
+    .input, .textarea {
+        font-size: 0.95rem;
+        padding: 0.7rem;
+    }
+
+    .submitButton {
+        font-size: 0.95rem;
+        padding: 0.7rem 1.2rem;
     }
 }
 
