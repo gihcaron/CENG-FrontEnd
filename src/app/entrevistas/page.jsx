@@ -129,6 +129,10 @@ const VideoExtra = [
         date: "18/01/2025",
     },
 ]
+    const handleVejaMaisClick = (url) => {
+        window.open(url, "_blank");
+    };
+
     return (
         <main className={styles.main}>
             <Header />
@@ -141,7 +145,13 @@ const VideoExtra = [
 
                 <div className={styles.TitleContainer}>
                     <h1 className={styles.Title}>Entrevistas Canal Nitro</h1>
-                    <p clasName={styles.Subtitle}> Veja Mais</p>
+                    <p
+                        className={styles.Subtitle}
+                        style={{ cursor: "pointer" }}
+                        onClick={() => handleVejaMaisClick("https://www.youtube.com/@NitroNeedles")}
+                    >
+                        Veja Mais
+                    </p>
                 </div>
 
                 <div className={styles.CardContainer}>
@@ -164,7 +174,13 @@ const VideoExtra = [
 
                 <div className={styles.TitleContainer}>
                     <h1 className={styles.Title}>Conteúdo Elas Na Pista</h1>
-                    <p className={styles.Subtitle}> Veja Mais</p>
+                    <p
+                        className={styles.Subtitle}
+                        style={{ cursor: "pointer" }}
+                        onClick={() => handleVejaMaisClick("https://www.youtube.com/@ElasNaPista")}
+                    >
+                        Veja Mais
+                    </p>
                 </div>
 
                 <div className={styles.CardContainer}>
@@ -187,7 +203,13 @@ const VideoExtra = [
 
                 <div className={styles.TitleContainer}>
                     <h1 className={styles.Title}>Conteúdos Diversos</h1>
-                    <p className={styles.Subtitle}> Veja Mais</p>
+                    <p
+                        className={styles.Subtitle}
+                        style={{ cursor: "pointer" }}
+                        onClick={() => handleVejaMaisClick("https://www.youtube.com/results?search_query=mulheres+automobilismo")}
+                    >
+                        Veja Mais
+                    </p>
                 </div>
 
                 <div className={styles.CardContainer}>
