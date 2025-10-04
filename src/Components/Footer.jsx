@@ -16,9 +16,9 @@ return (
                 <Image src="/images/CENG-Branco.png" alt="Logo" width={200} height={80} />
             </div>
             <nav className={styles.links}>
-                <a href="/about">Sobre</a>
-                <a href="/contact">Contato</a>
-                <a href="/privacy">Privacidade</a>
+                <a href="/sobre-mim">Sobre</a>
+                <a href="/entrevistas">Entrevistas</a>
+                <a href="/profissionais">Profissionais</a>
             </nav>
             <div className={styles.copy}>
                 © {new Date().getFullYear()} CENG. Todos os direitos reservados.
