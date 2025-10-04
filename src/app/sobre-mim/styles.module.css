@@ -592,13 +592,51 @@
     .title {
         font-size: 2rem;
     }
-
     .ContactSection {
         padding: 3rem 1.5rem;
     }
 
     .contactForm {
         padding: 2rem;
+    }
+
+    .servicesSection,
+    .toolsSection {
+        padding: 2rem 0.5rem;
+        max-width: 100vw;
+    }
+
+    .cardsGrid {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+    }
+
+
+    .container {
+        flex-direction: column;
+        gap: 1.2rem;
+    }
+
+    .imageProfile {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .photo {
+        width: 180px;
+        height: 180px;
+        border-width: 5px;
+    }
+
+    .textAboutProject {
+        width: 100%;
+    }
+
+
+
+    .buttons {
+        flex-direction: column;
+        gap: 0.7rem;
     }
 }
 
@@ -613,8 +651,13 @@
     }
 
     .ctaButton {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
         font-size: 1rem;
-        padding: 0.8rem 1.5rem;
+        padding: 1rem 2.5rem;
+        width: 15rem;
     }
 
     .contactTitle {
@@ -625,45 +668,219 @@
         padding: 1.5rem;
         gap: 1rem;
     }
+
+    .imageProfile {
+        width: 100%;
+        margin-bottom: 0.7rem;
+    }
+
+    .photo {
+        width: 300px;
+        height: 300px;
+        border-width: 4px;
+    }
+
+    .textAboutProject {
+        width: 100%;
+    }
+
+
+    .buttons {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
 }
 
 @media (max-width: 480px) {
     .HeroContainer {
-        padding: 1.5rem 0.8rem;
+        padding: 0.5rem 0.2rem;
+        flex-direction: column;
+        gap: 0.5rem;
+        width: 100%;
+        min-height: auto;
+    }
+
+    .heroContent {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+        padding: 0;
+        max-width: 100vw;
+        width: 100%;
+    }
+
+    .textContent {
+        gap: 1rem;
+        padding: 0;
+        width: 100%;
     }
 
     .title {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
+        text-align: center;
     }
 
     .subtitle {
-        font-size: 0.95rem;
+        font-size: 0.85rem;
+        margin: 0 1.5rem;
+        text-align: justify;
     }
 
     .ctaButton {
-        font-size: 0.9rem;
-        padding: 0.6rem 1.2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        font-size: 0.85rem;
+        padding: 0.5rem 1rem;
+        width: 15rem;
     }
 
-    .contactTitle {
-        font-size: 1.6rem;
+    .heroImage{
+      height: 300px;
+      width: 100%;
     }
 
-    .contactSubtitle {
-        font-size: 0.95rem;
+    .helloText {
+        width: 8rem;
+        font-size: 0.85rem;
+        padding: 0.3rem 0.7rem;
     }
 
-    .contactForm {
-        padding: 1rem;
+    .divider {
+        margin: 2rem 0;
+        height: 50px;
     }
 
-    .input, .textarea {
-        font-size: 0.9rem;
+    .dividerContent,
+    .dividerLine {
+        height: 50px;
+    }
+
+    .servicesSection,
+    .toolsSection{
+        padding: 0.7rem 0.2rem;
+        max-width: 100vw;
+    }
+
+    .cardsGrid {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+    }
+
+    .projectCard {
         padding: 0.7rem;
     }
 
+    .toolsGrid {
+        gap: 0.5rem;
+    }
+
+
+    .toolHeader,
+    .toolSubtitle {
+        font-size: 1.2rem;
+    }
+
+    .container {
+        flex-direction: column;
+        gap: 0.5rem;
+        padding: 0;
+    }
+
+    .imageProfile {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+
+    .photo {
+        width: 200px;
+        height: 200px;
+        border-width: 3px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .textAboutProject {
+        width: 100%;
+    }
+
+    .subtitleAboutProject,
+    .titleAboutProject {
+        font-size: 0.9rem;
+        text-align: center;
+    }
+
+    .descriptionAboutProject {
+        font-size: 0.85rem;
+        text-align: justify;
+        margin-bottom: 1rem;
+    }
+
+    .Infos {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .Info h3 {
+        font-size: 1.1rem;
+        text-align: center;
+    }
+
+    .Info p {
+        font-size: 0.8rem;
+        text-align: center;
+    }
+
+    .buttons {
+        flex-direction: column;
+        gap: 0.3rem;
+        width: 100%;
+    }
+
+    .projectButton {
+        width: 100%;
+        font-size: 0.9rem;
+        padding: 0.5rem 1rem;
+    }
+
+    .ContactSection {
+        padding: 1rem 0.2rem;
+    }
+
+    .contactTitle {
+        font-size: 1.2rem;
+    }
+
+    .contactSubtitle {
+        font-size: 0.85rem;
+    }
+
+    .contactForm {
+        padding: 0.5rem;
+        gap: 0.5rem;
+    }
+
+    .input, .textarea {
+        font-size: 0.8rem;
+        padding: 0.5rem;
+    }
+
     .submitButton {
-        font-size: 1rem;
-        padding: 0.7rem 1.3rem;
+        font-size: 0.85rem;
+        padding: 0.5rem 1rem;
+        width: 100%;
+    }
+
+    .thankYouMessage {
+        padding: 1rem;
+    }
+
+    .thankYouMessage h2 {
+        font-size: 1.1rem;
+    }
+
+    .thankYouMessage p {
+        font-size: 0.9rem;
     }
 }

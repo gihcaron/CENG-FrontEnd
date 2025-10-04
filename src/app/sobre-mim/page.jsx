@@ -100,11 +100,11 @@ export default function SobreMim() {
                     </div>
                     <div className={styles.imageContent}>
                         <Image
-                            src="/images/HomeImage.png"
+                            src="/images/giovannaBanner.png"
                             alt="Mulher no automobilismo"
                             width={600}
                             height={400}
-                            className={styles.heroImage}
+                            className={`${styles.heroImage} ${styles.distortedImage}`}
                             priority
                         />
 
@@ -170,10 +170,11 @@ export default function SobreMim() {
                     <div className={styles.imageProfile}>
                         <div className={styles.photo}>
                             <Image
-                                src="/images/danica-podio.jpg"
+                                src="/images/giovannab.jpg"
                                 alt="About Me"
                                 width={300}
                                 height={300}
+                                className={styles.distortedImage}
                             />
                         </div>
                     </div>
@@ -189,7 +190,7 @@ export default function SobreMim() {
                         <div className={styles.Infos}>
                             <div className={styles.Info}>
                                 <h3>+3 anos</h3>
-                                <p> STEM Racing</p>
+                                <p> Competidora STEM </p>
                             </div>
                             <div className={styles.Info}>
                                 <h3>1 ano</h3>
@@ -226,7 +227,7 @@ export default function SobreMim() {
                     
                         (
                             <div className={styles.thankYouMessage}>
-                                <Image className={styles.logo}
+                                <Image className={`${styles.logo} ${styles.distortedImage}`}
                                     src="/images/logoCENG.png"
                                     alt="Logo COM ELAS NO GRID"
                                     width={250}
