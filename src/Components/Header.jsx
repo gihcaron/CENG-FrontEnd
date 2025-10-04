@@ -39,8 +39,8 @@ export default function Header() {
                     <ul className={styles.list}>
                         <li className={styles.item}><a href="/home">Home</a></li>
                         <li className={styles.item}><a href="/profissionais">Profissionais</a></li>
-                        <li className={styles.item}><a href="/media">Midia</a></li>
-                        <li className={styles.sobreNos}><a href="/sobre-nós" className={styles.sobreTitle}>Nos Conheça!</a></li>
+                        <li className={styles.item}><a href="/entrevistas">Entrevistas</a></li>
+                        <li className={styles.sobreNos}><a href="/sobre-mim" className={styles.sobreTitle}>Me Conheça!</a></li>
                     </ul>
                 </nav>
             )}
@@ -77,11 +77,11 @@ export default function Header() {
                       <Link href="/profissionais" onClick={closeMenu}>Profissionais</Link>
                     </li>
                     <li>
-                      <Link href="/media" onClick={closeMenu}>Midia</Link>
+                      <Link href="/entrevistas" onClick={closeMenu}>Entrevistas</Link>
                     </li>
                     <li className={styles.sobreNos}>
-                      <Link href="/sobre-nós" className={styles.sobreTitle} onClick={closeMenu}>
-                        Nos Conheça!
+                      <Link href="/sobre-mim" className={styles.sobreTitle} onClick={closeMenu}>
+                        Me Conheça!
                       </Link>
                     </li>
                   </ul>
