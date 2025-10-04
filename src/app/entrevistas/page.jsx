@@ -11,6 +11,7 @@ import { FaYoutube } from "react-icons/fa";
 import Header from "../../Components/Header";
 import Footer from "../../Components/Footer";
 import EntrevistasCard from "../../Components/EntrevistasCard";
+import EntrevistaBanner from "../../Components/EntrevistaBanner";
 
 export default function Entrevistas() {
     const NitroEntrevista = [
@@ -44,7 +45,7 @@ export default function Entrevistas() {
   {
     youtubeLink: "https://www.youtube.com/watch?v=bxZmtrmuDS0&t=288s",
     thumbnail: "https://img.youtube.com/vi/bxZmtrmuDS0/hqdefault.jpg",
-    title: "Entrevista Episódio bxZmtrmuDS0",
+    title: "Entrevista Nathalia de Vivo",
     channel: "Canal NitroNeedles",
     duration: "52:06",
     views: "40",
@@ -70,7 +71,7 @@ export default function Entrevistas() {
     channel: "Elas Na Pista",
     duration: "37:15",
     views: "300",
-    date: "dd/mm/yyyy",
+    date: "15/07/2025",
   },
   {
     youtubeLink: "https://www.youtube.com/watch?v=SdCc_rpA3vI",
@@ -87,8 +88,8 @@ export default function Entrevistas() {
     title: "MARI BECKER FALA SOBRE SER INSPIRAÇÃO PARA MULHERES ",
     channel: "Elas Na Pista",
     duration: "51:05",
-    views: "150",        // preencher depois
-    date: "28/05/2025", // preencher depois
+    views: "150",       
+    date: "28/05/2025", 
   },
   ];
 const VideoExtra = [
@@ -136,6 +137,8 @@ const VideoExtra = [
     return (
         <main className={styles.main}>
             <Header />
+
+            <EntrevistaBanner />
 
             <section className={styles.bannerSection }>
               
