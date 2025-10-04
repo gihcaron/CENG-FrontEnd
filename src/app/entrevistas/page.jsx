@@ -132,6 +132,11 @@ const VideoExtra = [
     return (
         <main className={styles.main}>
             <Header />
+
+            <section className={styles.bannerSection }>
+              
+            </section>
+
             <section className={styles.EntrevistasSection}>
 
                 <div className={styles.TitleContainer}>
