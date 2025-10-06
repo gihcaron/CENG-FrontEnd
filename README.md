@@ -48,7 +48,7 @@ Crie um arquivo `.env.local` na raiz do projeto:
 # API Configuration
 NEXT_PUBLIC_API_URL=http://localhost:3001/api
 
-# Database Connection (se necessário para SSR)
+# Conexão no Back
 DATABASE_HOST=localhost
 DATABASE_PORT=Sua Porta
 DATABASE_NAME= automobilsimo_db
@@ -65,15 +65,6 @@ yarn dev
 ```
 
 Acesse [http://localhost:3000](http://localhost:3000) no seu navegador.
-
-## 🔗 Conexão com Backend
-
-### Endpoints da API
-Certifique-se de que o backend esteja rodando em `http://localhost:3001` com os seguintes endpoints:
-
-- `GET /api/v1/profissionais` - Lista todas as jornalistas
-- `GET /api/v1/categorias` - Lista categorias do automobilismo
-- `GET /api/v1/entrevistas` - Lista entrevistas disponíveis
 
 
 ## 🌟 Como Contribuir
