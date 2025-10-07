@@ -67,6 +67,30 @@ yarn dev
 Acesse [http://localhost:3000](http://localhost:3000) no seu navegador.
 
 
+## 5. Estrutura do projeto
+
+Abaixo está um resumo da estrutura principal do repositório para orientar contribuições e navegação rápida:
+
+```
+/
+├─ public/                 # Imagens, ícones e mídia estática
+│  ├─ icons/               # Favicon e ícones do projeto
+│  └─ images/              # Imagens usadas pelo site (banners, logos, fotos)
+│  └─ media/               # Vídeos e mídias grandes
+├─ src/                    # Código fonte do frontend
+│  ├─ app/                 # Páginas e rotas (Next.js App Router)
+│  │  ├─ home/             # Página inicial
+│  │  ├─ entrevistas/      # Páginas de entrevistas
+│  │  ├─ profissionais/    # Listagem e detalhe de profissionais
+│  │  └─ sobre-mim/        # Página sobre o projeto/autora
+│  ├─ Components/          # Componentes reutilizáveis (cards, header, footer)
+│  └─ middleware.js        # Middleware do Next.js (quando aplicável)
+├─ package.json            # Scripts e dependências do projeto
+├─ next.config.js / mjs    # Configurações do Next.js
+└─ README.md               # Documentação (este arquivo)
+```
+
+
 ## 🌟 Como Contribuir
 
 1. Faça um fork do projeto
