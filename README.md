@@ -29,8 +29,9 @@ Um site interativo dedicado à visibilização da participação feminina no aut
 
 ### 1. Clone o repositório
 ```bash
-git clone https://github.com/seu-usuario/mulheres-automobilismo-frontend.git
-cd mulheres-automobilismo-frontend
+git clone https://github.com/gihcaron/CENG-FrontEnd.git
+cd CENG-FrontEnd
+code.
 ```
 
 ### 2. Instale as dependências
