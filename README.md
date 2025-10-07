@@ -52,7 +52,7 @@ Crie um arquivo `.env.local` na raiz do projeto:
 
 ```env
 # API Configuration
-NEXT_PUBLIC_API_URL=http://localhost:3001/api
+NEXT_PUBLIC_API_URL=http://localhost:3000/api
 
 # Conexão no Back (Apenas no arquivo .env do Back-End)
 DATABASE_HOST=localhost
