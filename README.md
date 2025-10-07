@@ -35,6 +35,11 @@ code.
 ```
 
 ### 2. Instale as dependências
+
+Abra o terminal do VS code e instale as dependências
+
+##### 💖 Dica: Utilize o terminal CMD para evitar eventualidades
+
 ```bash
 npm install
 # ou
@@ -49,7 +54,7 @@ Crie um arquivo `.env.local` na raiz do projeto:
 # API Configuration
 NEXT_PUBLIC_API_URL=http://localhost:3001/api
 
-# Conexão no Back
+# Conexão no Back (Apenas no arquivo .env do Back-End)
 DATABASE_HOST=localhost
 DATABASE_PORT=Sua Porta
 DATABASE_NAME= automobilsimo_db
@@ -65,7 +70,7 @@ npm run dev
 yarn dev
 ```
 
-Acesse [http://localhost:3000](http://localhost:3000) no seu navegador.
+Acesse [http://localhost:3001](http://localhost:3001) no seu navegador.
 
 
 ## 5. Estrutura do projeto
